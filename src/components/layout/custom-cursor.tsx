@@ -6,11 +6,10 @@ const CURSOR_TRAIL_COUNT = 10;
 const CursorDot = ({ position, isHovering, index }: { position: { x: number; y: number }, isHovering: boolean, index: number }) => {
   const isMainDot = index === 0;
   
-  // Main dot is larger and changes on hover
-  const size = isMainDot ? (isHovering ? 24 : 16) : 6;
-  const opacity = isMainDot ? 1 : 1 - index / CURSOR_TRAIL_COUNT;
-  const scale = isMainDot ? 1 : 1 - index / CURSOR_TRAIL_COUNT;
-  
+  // Main dot is a small circle. Trailing dots are smaller.
+  const size = isMainDot ? 8 : 4; 
+  const opacity = 1 - index / CURSOR_TRAIL_COUNT;
+
   return (
     <div
       style={{
@@ -19,11 +18,21 @@ const CursorDot = ({ position, isHovering, index }: { position: { x: number; y: 
         width: `${size}px`,
         height: `${size}px`,
         opacity: opacity,
-        transform: `translate(-50%, -50%) scale(${scale})`,
-        transition: `width 0.2s, height 0.2s, top ${0.01 * index}s, left ${0.01 * index}s`,
+        transform: `translate(-50%, -50%)`,
+        transition: `top ${0.02 * index}s, left ${0.02 * index}s`,
       }}
-      className={`fixed pointer-events-none z-[9999] bg-primary transition-[width,height,opacity] ease-out ${isMainDot ? 'rounded-full' : ''}`}
-    ></div>
+      className={`fixed pointer-events-none z-[9999] rounded-full bg-primary transition-[width,height,opacity,transform] ease-out`}
+    >
+      {isMainDot && (
+        <div
+          className="absolute inset-0 rounded-full border border-primary transition-all duration-300"
+          style={{
+            transform: isHovering ? 'scale(4)' : 'scale(0)',
+            opacity: isHovering ? 1 : 0,
+          }}
+        />
+      )}
+    </div>
   );
 };
 
