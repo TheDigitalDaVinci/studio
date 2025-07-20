@@ -44,7 +44,7 @@ export function Header() {
       <div className="container flex h-16 max-w-screen-2xl items-center justify-between">
         <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
           <Code className="h-6 w-6 text-primary" />
-          <span className="font-bold tracking-tight">The Digital Da Vinci</span>
+          <span className="font-bold tracking-tight text-foreground">The Digital Da Vinci</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-6">
@@ -65,7 +65,7 @@ export function Header() {
               <div className="flex items-center justify-between py-4 border-b">
                  <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
                     <Code className="h-6 w-6 text-primary" />
-                    <span className="font-bold tracking-tight">The Digital Da Vinci</span>
+                    <span className="font-bold tracking-tight text-foreground">The Digital Da Vinci</span>
                 </Link>
                 <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>
                     <X className="h-5 w-5" />

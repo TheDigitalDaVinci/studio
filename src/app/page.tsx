@@ -12,15 +12,15 @@ export default function Home() {
 
   return (
     <div className="container mx-auto px-4 py-12 md:py-20">
-      <section className="text-center min-h-[60vh] flex flex-col items-center justify-center relative">
-        <div className="absolute inset-0 -z-10 h-full w-full bg-background bg-[radial-gradient(#1f3353_1px,transparent_1px)] [background-size:16px_16px]"></div>
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-4 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+      <div className="absolute inset-0 -z-10 h-full w-full bg-background bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(0,112,243,0.15),rgba(255,255,255,0))]"></div>
+      <section className="text-center min-h-[60vh] flex flex-col items-center justify-center">
+        <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-4 text-foreground">
           Artistry in the Digital Age.
         </h1>
         <p className="max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground mb-8">
           Welcome to the workshop of a modern renaissance artisan. I am The Digital Da Vinci, and I blend timeless design principles with cutting-edge technology to craft unique digital experiences.
         </p>
-        <Button asChild size="lg">
+        <Button asChild size="lg" className="hover:bg-foreground hover:text-background transition-colors duration-300">
           <Link href="/portfolio">
             Explore My Portfolio <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
@@ -28,11 +28,11 @@ export default function Home() {
       </section>
 
       <section className="mt-20 md:mt-32">
-        <h2 className="text-4xl font-bold text-center mb-12 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">Featured Creations</h2>
+        <h2 className="text-4xl font-bold text-center mb-12 text-foreground">Featured Creations</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {featuredProjects.map((project) => (
             <Link key={project.id} href={`/portfolio#${project.slug}`} className="group">
-              <Card className="h-full overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border-border/80 hover:border-primary/50 bg-card/80 backdrop-blur-sm">
+              <Card className="h-full overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border-border bg-card/80 backdrop-blur-sm hover:border-primary/50">
                 <CardHeader className="p-0">
                    <div className="aspect-video overflow-hidden">
                      <Image
@@ -47,7 +47,7 @@ export default function Home() {
                 </CardHeader>
                 <CardContent className="p-6">
                   <Badge variant="secondary" className="mb-2">{project.category}</Badge>
-                  <CardTitle className="text-2xl">{project.title}</CardTitle>
+                  <CardTitle className="text-2xl text-foreground">{project.title}</CardTitle>
                   <p className="text-muted-foreground mt-2">{project.description}</p>
                 </CardContent>
               </Card>
