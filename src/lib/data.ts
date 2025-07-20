@@ -63,6 +63,17 @@ export const projects: Project[] = [
     tags: ['D5 Render', 'Archviz', 'Virtual Tour', 'Healthcare Design'],
     externalUrl: 'https://nixmo4.github.io/SNIMS-Reception/',
   },
+  {
+    id: 7,
+    title: 'Residence Interior Design',
+    slug: 'residence-interior-design',
+    description: 'An immersive virtual walkthrough of a modern residence interior.',
+    longDescription: 'This project showcases a detailed and interactive interior design visualization. Users can navigate through the space in real-time to appreciate the layout, materials, and lighting design of this contemporary home.',
+    image: 'https://placehold.co/600x400.png',
+    category: 'Archviz',
+    tags: ['D5 Render', 'Archviz', 'Interior Design', 'Virtual Tour'],
+    externalUrl: 'https://nixmo4.github.io/Dr.Nidhin-s-Interior-Design/',
+  },
 ];
 
 export const courses: Course[] = [
