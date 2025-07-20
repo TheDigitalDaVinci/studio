@@ -5,6 +5,7 @@ import type { Project } from '@/types';
 import { Button } from '@/components/ui/button';
 import { ProjectCard } from './project-card';
 import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
 
 type ProjectCategory = 'All' | Project['category'];
 
@@ -34,9 +35,20 @@ export function ProjectGallery({ projects }: { projects: Project[] }) {
       
       <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <AnimatePresence>
-          {filteredProjects.map(project => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
+          {filteredProjects.map(project => {
+            if (project.externalUrl) {
+              return (
+                <a key={project.id} href={project.externalUrl} target="_blank" rel="noopener noreferrer">
+                  <ProjectCard project={project} />
+                </a>
+              )
+            }
+            return (
+              <Link key={project.id} href={`/portfolio#${project.slug}`} className="group">
+                 <ProjectCard project={project} />
+              </Link>
+            )
+           })}
         </AnimatePresence>
       </motion.div>
     </div>

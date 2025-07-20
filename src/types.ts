@@ -7,6 +7,7 @@ export interface Project {
   image: string;
   category: 'Archviz' | 'Product Design' | 'Games' | 'Apps' | 'Interactive Experiences';
   tags: string[];
+  externalUrl?: string;
 }
 
 export interface Course {

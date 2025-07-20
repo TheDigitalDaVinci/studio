@@ -3,13 +3,14 @@ import type { Project, Course } from '@/types';
 export const projects: Project[] = [
   {
     id: 1,
-    title: 'Kinetic Archways',
-    slug: 'kinetic-archways',
-    description: 'An interactive architectural visualization of a futuristic museum.',
-    longDescription: 'Kinetic Archways is a real-time architectural visualization project that explores the concept of dynamic and responsive spaces. Users can walk through a beautifully rendered museum where the architecture itself reacts to their presence. Built with Unreal Engine 5, this project showcases advanced lighting techniques, high-fidelity assets, and interactive elements to create a truly immersive experience.',
-    image: 'https://placehold.co/600x400.png',
+    title: "Bineesh's Residence",
+    slug: 'bineesh-residence',
+    description: 'A virtual walkthrough of a modern residence. Click to explore.',
+    longDescription: "Explore a fully interactive, real-time architectural visualization of Bineesh's Residence. This project allows users to walk through a beautifully rendered home, showcasing advanced lighting, high-fidelity assets, and a seamless user experience for virtual exploration.",
+    image: '/bineesh-residence.png',
     category: 'Archviz',
-    tags: ['Unreal Engine 5', 'Archviz', 'Real-time', 'VR'],
+    tags: ['D5 Render', 'Archviz', 'Real-time', 'Virtual Tour'],
+    externalUrl: 'https://nixmo4.github.io/Bineesh-s-Residence-Virtual-Walk-Through/',
   },
   {
     id: 2,
