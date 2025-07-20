@@ -12,7 +12,6 @@ export default function Home() {
 
   return (
     <div className="container mx-auto px-4 py-12 md:py-20">
-      <div className="absolute inset-0 -z-10 h-full w-full bg-background bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(0,112,243,0.15),rgba(255,255,255,0))]"></div>
       <section className="text-center min-h-[60vh] flex flex-col items-center justify-center">
         <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-4 text-foreground">
           Artistry in the Digital Age.
@@ -20,9 +19,9 @@ export default function Home() {
         <p className="max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground mb-8">
           Welcome to the workshop of a modern renaissance artisan. I am The Digital Da Vinci, and I blend timeless design principles with cutting-edge technology to craft unique digital experiences.
         </p>
-        <Button asChild size="lg" className="hover:bg-foreground hover:text-background transition-colors duration-300">
+        <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-foreground hover:text-background transition-all duration-300 group">
           <Link href="/portfolio">
-            Explore My Portfolio <ArrowRight className="ml-2 h-5 w-5" />
+            Explore My Portfolio <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
           </Link>
         </Button>
       </section>

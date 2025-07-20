@@ -7,22 +7,42 @@ export function Background3D() {
 
   useEffect(() => {
     if (!mountRef.current) return;
-
     const currentMount = mountRef.current;
 
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, currentMount.clientWidth / currentMount.clientHeight, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-
+    
     renderer.setSize(currentMount.clientWidth, currentMount.clientHeight);
     renderer.setPixelRatio(window.devicePixelRatio);
     currentMount.appendChild(renderer.domElement);
 
-    const geometry = new THREE.IcosahedronGeometry(2, 1);
-    const edges = new THREE.EdgesGeometry(geometry);
-    const material = new THREE.LineBasicMaterial({ color: 0x0070f3, transparent: true, opacity: 0.5 });
-    const wireframe = new THREE.LineSegments(edges, material);
-    scene.add(wireframe);
+    // Deconstructed sphere
+    const group = new THREE.Group();
+    scene.add(group);
+
+    const geometry = new THREE.SphereGeometry(2, 32, 16);
+    
+    // Points material for a particle effect
+    const pointsMaterial = new THREE.PointsMaterial({
+      color: 0xc47f2f, // Gold color
+      size: 0.03,
+      transparent: true,
+      opacity: 0.7,
+      sizeAttenuation: true,
+    });
+    const points = new THREE.Points(geometry, pointsMaterial);
+    group.add(points);
+
+    // Wireframe for structure
+    const wireframeMaterial = new THREE.MeshBasicMaterial({
+      color: 0x9a5c49, // Terracotta color
+      wireframe: true,
+      transparent: true,
+      opacity: 0.1,
+    });
+    const wireframe = new THREE.Mesh(geometry, wireframeMaterial);
+    group.add(wireframe);
 
     camera.position.z = 5;
 
@@ -36,18 +56,11 @@ export function Background3D() {
 
     const animate = () => {
       requestAnimationFrame(animate);
-
-      wireframe.rotation.x += 0.001;
-      wireframe.rotation.y += 0.001;
-      
-      // Gently move towards mouse
-      camera.position.x += (mouse.x * 2 - camera.position.x) * 0.02;
-      camera.position.y += (mouse.y * 2 - camera.position.y) * 0.02;
-      camera.lookAt(scene.position);
-
+      // Subtle rotation and mouse follow
+      group.rotation.x += (mouse.y * 0.2 - group.rotation.x) * 0.02;
+      group.rotation.y += (mouse.x * 0.2 - group.rotation.y) * 0.02;
       renderer.render(scene, camera);
     };
-
     animate();
 
     const handleResize = () => {
