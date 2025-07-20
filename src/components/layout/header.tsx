@@ -12,7 +12,7 @@ import { cn } from '@/lib/utils';
 
 const navLinks = [
   { href: '/portfolio', label: 'Portfolio' },
-  { href: '/blog', label: 'Blog' },
+  { href: '/courses', label: 'Masterclasses' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
   { href: '/recommendations', label: 'AI Recommendations' },
@@ -28,7 +28,7 @@ export function Header() {
       onClick={() => setIsMobileMenuOpen(false)}
       className={cn(
         'transition-colors text-lg md:text-sm hover:text-primary',
-        pathname === href ? 'text-primary font-semibold' : 'text-muted-foreground'
+        pathname.startsWith(href) ? 'text-primary font-semibold' : 'text-muted-foreground'
       )}
     >
       {label}

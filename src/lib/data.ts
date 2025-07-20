@@ -1,4 +1,4 @@
-import type { Project, BlogPost } from '@/types';
+import type { Project, Course } from '@/types';
 
 export const projects: Project[] = [
   {
@@ -63,35 +63,41 @@ export const projects: Project[] = [
   },
 ];
 
-export const blogPosts: BlogPost[] = [
-  {
-    id: 1,
-    title: 'The Art of "Vibe Coding"',
-    slug: 'the-art-of-vibe-coding',
-    description: 'How to create immersive experiences by focusing on feeling and aesthetics in your code.',
-    image: 'https://placehold.co/600x400.png',
-    date: '2024-05-15',
-    author: 'The Digital Da Vinci',
-    content: 'Vibe coding is more than just writing functional code; it\'s about crafting an experience. It\'s the subtle art of using animation, color, and sound to evoke a specific feeling in the user. In this article, we\'ll explore the principles of vibe coding and how you can apply them to your own projects, whether you\'re building a website, a game, or an interactive installation. We\'ll look at case studies from iconic digital experiences and break down the techniques used to create a powerful emotional resonance. From the satisfying feedback of a button click to the ambient soundscape of a virtual world, every detail contributes to the overall vibe. Join me as we delve into the intersection of art and technology, and learn how to make your code not just work, but feel right.',
-  },
-  {
-    id: 2,
-    title: 'A Deep Dive into Procedural Generation with Three.js',
-    slug: 'procedural-generation-threejs-tutorial',
-    description: 'A step-by-step tutorial on creating endless worlds using JavaScript and WebGL.',
-    image: 'https://placehold.co/600x400.png',
-    date: '2024-06-02',
-    author: 'The Digital Da Vinci',
-    content: 'Procedural generation is a powerful technique for creating vast amounts of content from a small set of rules. In this tutorial, we will walk through the process of building a simple procedurally generated world using Three.js. We will cover the basics of setting up a Three.js scene, using noise algorithms like Perlin or Simplex noise to generate terrain, and adding details like trees and rocks based on specific rules. This tutorial is for developers with a basic understanding of JavaScript who want to dive into the exciting world of generative art and game development. By the end, you will have a solid foundation for creating your own unique and endless digital landscapes.',
-  },
-  {
-    id: 3,
-    title: 'From Blueprint to Reality: The Archviz Pipeline',
-    slug: 'the-archviz-pipeline',
-    description: 'An industry insider\'s look at the process of creating stunning architectural visualizations.',
-    image: 'https://placehold.co/600x400.png',
-    date: '2024-06-20',
-    author: 'The Digital Da Vinci',
-    content: 'Architectural visualization (archviz) is a fascinating field that blends technical skill with artistic vision. It\'s about more than just making pretty pictures of buildings; it\'s about telling a story and selling a dream. This article provides a comprehensive overview of the entire archviz pipeline, from the moment a client hands you a set of blueprints to the final delivery of breathtaking renderings. We will discuss essential steps like 3D modeling, texturing, lighting, and post-production. We\'ll also touch on the different software used in the industry, such as 3ds Max, V-Ray, and Unreal Engine, and discuss the pros and cons of each. Whether you\'re an aspiring archviz artist or a client looking to understand the process better, this guide will demystify the magic behind the renders.',
-  },
-];
+export const courses: Course[] = [
+    {
+      id: 1,
+      title: 'Unreal Engine 5 for Photorealistic Archviz',
+      slug: 'unreal-engine-5-archviz',
+      description: 'Master the art of creating stunning, real-time architectural visualizations.',
+      longDescription: 'Go from zero to hero in the world of real-time archviz. This course covers everything from importing models and setting up materials to advanced lighting with Lumen and creating cinematic sequences. You\'ll learn the complete workflow for producing photorealistic visuals that will wow your clients.',
+      image: 'https://placehold.co/600x400.png',
+      price: 499,
+      level: 'Advanced',
+      duration: '8 Weeks',
+      topics: ['Advanced Lumen Lighting', 'DataSmith Workflows', 'Material Creation', 'Cinematic Renders', 'Performance Optimization']
+    },
+    {
+      id: 2,
+      title: 'Creative Coding with Three.js',
+      slug: 'creative-coding-threejs',
+      description: 'Learn to create beautiful, interactive 3D web experiences from scratch.',
+      longDescription: 'Unlock the power of WebGL with Three.js. This course is for developers and artists who want to bring their ideas to life on the web. We will cover the fundamentals of 3D graphics, shader programming (GLSL), and creating generative art. You\'ll build several projects, including an interactive particle system and a procedurally generated landscape.',
+      image: 'https://placehold.co/600x400.png',
+      price: 299,
+      level: 'Intermediate',
+      duration: '6 Weeks',
+      topics: ['3D Scene Setup', 'Custom Shaders (GLSL)', 'Post-processing Effects', 'Generative Geometry', 'Performance on the Web']
+    },
+    {
+      id: 3,
+      title: 'Intro to 3D Modeling with Blender',
+      slug: 'intro-to-blender',
+      description: 'A beginner\'s guide to the fundamentals of 3D modeling and rendering.',
+      longDescription: 'New to 3D? This course is the perfect starting point. We will cover the Blender interface, essential modeling tools, basic texturing, and lighting principles. By the end, you\'ll have the confidence to create your own 3D assets and produce beautiful renders for your portfolio.',
+      image: 'https://placehold.co/600x400.png',
+      price: 149,
+      level: 'Beginner',
+      duration: '4 Weeks',
+      topics: ['Blender UI & Navigation', 'Polygon Modeling Techniques', 'UV Unwrapping', 'Basic Materials & Shading', 'Rendering with Cycles']
+    },
+  ];

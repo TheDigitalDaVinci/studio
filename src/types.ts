@@ -9,13 +9,15 @@ export interface Project {
   tags: string[];
 }
 
-export interface BlogPost {
+export interface Course {
   id: number;
   title: string;
   slug: string;
   description: string;
+  longDescription: string;
   image: string;
-  date: string;
-  author: string;
-  content: string;
+  price: number;
+  level: 'Beginner' | 'Intermediate' | 'Advanced';
+  duration: string;
+  topics: string[];
 }
