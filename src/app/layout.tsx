@@ -5,6 +5,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Background3D } from '@/components/layout/background-3d';
+import { CustomCursor } from '@/components/layout/custom-cursor';
 
 export const metadata: Metadata = {
   title: 'The Digital Da Vinci',
@@ -30,6 +31,7 @@ export default function RootLayout({
         />
       </head>
       <body className={cn('font-body antialiased min-h-screen flex flex-col')}>
+        <CustomCursor />
         <Background3D />
         <Header />
         <main className="flex-grow z-10">{children}</main>
