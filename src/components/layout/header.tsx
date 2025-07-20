@@ -31,8 +31,8 @@ export function Header() {
       rel={external ? 'noopener noreferrer' : undefined}
       onClick={() => setIsMobileMenuOpen(false)}
       className={cn(
-        'transition-colors text-lg md:text-sm hover:text-primary',
-        isActive ? 'text-primary font-semibold' : 'text-foreground/80'
+        'transition-colors text-sm hover:text-primary',
+        isActive ? 'text-primary font-semibold' : 'text-muted-foreground'
       )}
     >
       {label}
@@ -40,11 +40,11 @@ export function Header() {
   )};
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-border/80 bg-background/80 backdrop-blur">
       <div className="container flex h-16 max-w-screen-2xl items-center justify-between">
         <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
           <Code className="h-6 w-6 text-primary" />
-          <span className="font-headline text-xl font-bold tracking-tight">The Digital Da Vinci</span>
+          <span className="font-bold tracking-tight">The Digital Da Vinci</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-6">
@@ -65,7 +65,7 @@ export function Header() {
               <div className="flex items-center justify-between py-4 border-b">
                  <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
                     <Code className="h-6 w-6 text-primary" />
-                    <span className="font-headline text-lg font-bold tracking-tight">The Digital Da Vinci</span>
+                    <span className="font-bold tracking-tight">The Digital Da Vinci</span>
                 </Link>
                 <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>
                     <X className="h-5 w-5" />

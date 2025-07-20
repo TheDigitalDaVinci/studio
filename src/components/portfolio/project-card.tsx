@@ -15,7 +15,7 @@ export function ProjectCard({ project }: { project: Project }) {
       className="group h-full"
       id={project.slug}
     >
-      <Card className="h-full overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border-2 border-transparent hover:border-primary">
+      <Card className="h-full overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border-2 border-border/80 hover:border-primary">
         <CardHeader className="p-0 relative">
           <div className="aspect-video overflow-hidden">
             <Image
@@ -29,8 +29,8 @@ export function ProjectCard({ project }: { project: Project }) {
           </div>
         </CardHeader>
         <CardContent className="p-6">
-          <Badge variant="secondary" className="mb-2 bg-accent text-accent-foreground">{project.category}</Badge>
-          <CardTitle className="font-headline text-2xl">{project.title}</CardTitle>
+          <Badge variant="secondary" className="mb-2">{project.category}</Badge>
+          <CardTitle className="text-2xl">{project.title}</CardTitle>
           <p className="text-muted-foreground mt-2">{project.description}</p>
         </CardContent>
       </Card>

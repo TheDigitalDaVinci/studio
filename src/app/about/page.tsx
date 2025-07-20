@@ -4,11 +4,12 @@ import { Check } from 'lucide-react';
 
 export default function AboutPage() {
   return (
-    <div className="container mx-auto px-4 py-12">
-      <Card className="overflow-hidden">
+    <div className="container mx-auto px-4 py-12 relative">
+      <div className="absolute inset-0 -z-10 h-full w-full bg-background bg-[radial-gradient(#1f3353_1px,transparent_1px)] [background-size:16px_16px]"></div>
+      <Card className="overflow-hidden bg-card/80 backdrop-blur-sm border-border/80">
         <div className="grid grid-cols-1 md:grid-cols-2">
           <div className="p-8 md:p-12 flex flex-col justify-center">
-            <h1 className="font-headline text-5xl md:text-6xl font-bold tracking-tighter mb-4">
+            <h1 className="text-5xl md:text-6xl font-bold tracking-tighter mb-4 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
               The Digital <br /> Da Vinci
             </h1>
             <p className="text-xl text-primary font-semibold mb-6">Architect of Digital Worlds</p>

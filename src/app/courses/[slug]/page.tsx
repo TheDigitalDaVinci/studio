@@ -19,10 +19,11 @@ export default function CourseDetailPage({ params }: { params: { slug: string } 
   }
 
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="container mx-auto px-4 py-12 relative">
+      <div className="absolute inset-0 -z-10 h-full w-full bg-background bg-[radial-gradient(#1f3353_1px,transparent_1px)] [background-size:16px_16px]"></div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
         <div className="lg:col-span-2">
-          <div className="relative aspect-video w-full overflow-hidden rounded-lg mb-8 shadow-lg">
+          <div className="relative aspect-video w-full overflow-hidden rounded-lg mb-8 shadow-lg border border-border/80">
             <Image
               src={course.image}
               alt={course.title}
@@ -31,15 +32,15 @@ export default function CourseDetailPage({ params }: { params: { slug: string } 
               data-ai-hint="online course abstract"
             />
           </div>
-          <div className="prose prose-lg dark:prose-invert max-w-none text-foreground/90 leading-relaxed space-y-6">
-            <h1 className="font-headline text-4xl md:text-5xl font-bold tracking-tighter mb-4">{course.title}</h1>
-            <p>{course.longDescription}</p>
+          <div className="prose prose-lg prose-invert max-w-none text-foreground/90 leading-relaxed space-y-6">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tighter mb-4 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">{course.title}</h1>
+            <p className="text-muted-foreground">{course.longDescription}</p>
           </div>
         </div>
         <aside className="lg:col-span-1">
           <div className="sticky top-24">
-            <div className="bg-card rounded-lg shadow-sm p-6">
-              <h2 className="font-headline text-2xl mb-4">Course Details</h2>
+            <div className="bg-card/80 backdrop-blur-sm rounded-lg border border-border/80 p-6">
+              <h2 className="text-2xl mb-4 font-semibold">Course Details</h2>
               <div className="space-y-4 text-lg">
                 <div className="flex items-center gap-3">
                   <IndianRupee className="h-6 w-6 text-primary" />
@@ -60,8 +61,8 @@ export default function CourseDetailPage({ params }: { params: { slug: string } 
               </Button>
             </div>
 
-            <div className="bg-card rounded-lg shadow-sm p-6 mt-8">
-              <h3 className="font-headline text-xl mb-4">What You'll Learn</h3>
+            <div className="bg-card/80 backdrop-blur-sm rounded-lg border border-border/80 p-6 mt-8">
+              <h3 className="text-xl mb-4 font-semibold">What You'll Learn</h3>
               <ul className="space-y-3">
                 {course.topics.map((topic, index) => (
                   <li key={index} className="flex items-start gap-3">
