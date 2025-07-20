@@ -5,14 +5,17 @@ import { projects, courses } from '@/lib/data';
 import { FeaturedItemCard } from '@/components/portfolio/featured-item-card';
 
 export default function Home() {
-  // Combine and select a mix of featured projects and courses
-  const featuredProjects = projects.slice(0, 2);
-  const featuredCourses = courses.slice(0, 1);
-  
+  const featuredArchviz = projects.find(p => p.category === 'Archviz');
+  const featuredGame = projects.find(p => p.category === 'Games');
+  const featuredApp = projects.find(p => p.category === 'Apps');
+  const featuredCourse = courses[0];
+
   const featuredItems = [
-    ...featuredProjects.map(p => ({ ...p, type: 'project' as const })),
-    ...featuredCourses.map(c => ({ ...c, type: 'course' as const }))
-  ].sort(() => Math.random() - 0.5); // shuffle the items
+    featuredArchviz && { ...featuredArchviz, type: 'project' as const },
+    featuredGame && { ...featuredGame, type: 'project' as const },
+    featuredApp && { ...featuredApp, type: 'project' as const },
+    featuredCourse && { ...featuredCourse, type: 'course' as const },
+  ].filter(Boolean).sort(() => Math.random() - 0.5); // Filter out undefined and shuffle
 
   return (
     <div className="container mx-auto px-4 py-12 md:py-20">
@@ -32,9 +35,9 @@ export default function Home() {
 
       <section className="mt-20 md:mt-32">
         <h2 className="text-4xl font-headline font-bold text-center mb-12 text-foreground">Featured Creations</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {featuredItems.map((item) => (
-             <FeaturedItemCard key={`${item.type}-${item.id}`} item={item} />
+             <FeaturedItemCard key={`${item!.type}-${item!.id}`} item={item!} />
           ))}
         </div>
       </section>
