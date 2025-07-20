@@ -7,7 +7,7 @@ const CursorDot = ({ position, isHovering, index }: { position: { x: number; y: 
   const isMainDot = index === 0;
   
   // Main dot is larger and changes on hover
-  const size = isMainDot ? (isHovering ? 24 : 16) : 2;
+  const size = isMainDot ? (isHovering ? 24 : 16) : 6;
   const opacity = isMainDot ? 1 : 1 - index / CURSOR_TRAIL_COUNT;
   const scale = isMainDot ? 1 : 1 - index / CURSOR_TRAIL_COUNT;
   
