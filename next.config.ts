@@ -16,9 +16,13 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        port: '9002', // Make sure this matches your dev server port
+        pathname: '/**',
+      },
     ],
-    // Allow local images by leaving the domains array empty
-    domains: [],
   },
 };
 
