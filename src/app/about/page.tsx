@@ -11,7 +11,7 @@ export default function AboutPage() {
             <h1 className="font-headline text-5xl md:text-6xl font-bold tracking-tighter mb-4">
               The Digital <br /> Da Vinci
             </h1>
-            <p className="text-xl text-primary font-semibold mb-6">A Modern Renaissance Artisan</p>
+            <p className="text-xl text-primary font-semibold mb-6">Architect of Digital Worlds</p>
             <div className="space-y-4 text-muted-foreground text-lg">
                 <p>
                     I’m a Civil Engineering graduate turned 3D Visualizer, passionate about transforming ideas into immersive digital experiences. With advanced skills in tools like SketchUp and D5 Render, I specialize in architectural and interior visualization that merges technical precision with visual storytelling.
