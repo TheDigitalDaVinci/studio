@@ -74,6 +74,17 @@ export const projects: Project[] = [
     tags: ['D5 Render', 'Archviz', 'Interior Design', 'Virtual Tour'],
     externalUrl: 'https://nixmo4.github.io/Dr.Nidhin-s-Interior-Design/',
   },
+  {
+    id: 8,
+    title: 'Bedroom Interior Interactive Render',
+    slug: 'bedroom-interior-interactive-render',
+    description: 'An interactive 360-degree render of a modern bedroom interior.',
+    longDescription: "This interactive render allows for a 360-degree view of a bedroom, showcasing different lighting scenarios and material details. It's a demonstration of real-time rendering capabilities for interior spaces.",
+    image: 'https://placehold.co/600x400.png',
+    category: 'Archviz',
+    tags: ['360 Render', 'Archviz', 'Interior Design', 'Virtual Tour'],
+    externalUrl: 'https://thedigitaldavinci.github.io/Lightingtest-360/',
+  },
 ];
 
 export const courses: Course[] = [
