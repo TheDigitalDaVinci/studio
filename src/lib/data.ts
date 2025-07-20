@@ -13,16 +13,6 @@ export const projects: Project[] = [
     externalUrl: 'https://nixmo4.github.io/Bineesh-s-Residence-Virtual-Walk-Through/',
   },
   {
-    id: 2,
-    title: 'Aether-Watch',
-    slug: 'aether-watch',
-    description: 'A sleek and modern smartwatch product design and visualization.',
-    longDescription: 'The Aether-Watch project involved the complete design lifecycle, from initial concept sketches to a high-fidelity 3D product visualization. The design focuses on a minimalist aesthetic, combining classic watchmaking principles with futuristic materials. The final renders, created in Blender and Keyshot, were used for marketing and pre-launch campaigns.',
-    image: 'https://placehold.co/600x400.png',
-    category: 'Product Design',
-    tags: ['Blender', 'Keyshot', 'UI/UX', 'Industrial Design'],
-  },
-  {
     id: 3,
     title: 'Neon Drifters',
     slug: 'neon-drifters',
@@ -42,16 +32,6 @@ export const projects: Project[] = [
     category: 'Apps',
     tags: ['Web App', 'Community', 'Real-time', 'Utilities'],
     externalUrl: 'https://busundo.thedigitaldavinci.com/',
-  },
-  {
-    id: 5,
-    title: 'Project Stardust',
-    slug: 'project-stardust',
-    description: 'An interactive WebGL journey through a procedurally generated galaxy.',
-    longDescription: 'Project Stardust is a web-based interactive experience created with Three.js and WebGL. It allows users to explore a vast, procedurally generated galaxy in their browser. This project was a deep dive into shader programming, performance optimization for the web, and creating a sense of infinite exploration through code.',
-    image: 'https://placehold.co/600x400.png',
-    category: 'Interactive Experiences',
-    tags: ['Three.js', 'WebGL', 'Generative Art', 'Web Dev'],
   },
   {
     id: 6,
