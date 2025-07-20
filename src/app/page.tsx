@@ -19,7 +19,7 @@ export default function Home() {
           Welcome to the workshop of a modern renaissance artisan. I am The Digital Da Vinci, and I blend timeless design principles with cutting-edge technology to craft unique digital experiences, from immersive games to photorealistic visualizations.
         </p>
         <Button asChild size="lg" className="rounded-full">
-          <Link href="https://nidhinzzx4.myportfolio.com/" target="_blank" rel="noopener noreferrer">
+          <Link href="/portfolio">
             Explore My Portfolio <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </Button>

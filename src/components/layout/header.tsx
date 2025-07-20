@@ -12,7 +12,7 @@ import { cn } from '@/lib/utils';
 
 const navLinks = [
   { href: '/', label: 'Home' },
-  { href: 'https://nidhinzzx4.myportfolio.com/', label: 'Portfolio', external: true },
+  { href: '/portfolio', label: 'Portfolio' },
   { href: '/courses', label: 'Masterclasses' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
