@@ -31,9 +31,9 @@ export function Background3D() {
     // Object
     const geometry = new THREE.SphereGeometry(1.5, 32, 32);
     const material = new THREE.MeshStandardMaterial({
-      color: 0x98FB98, // A light green color, close to the new primary
-      metalness: 0.1,
-      roughness: 0.8,
+      color: 0xD4AF37, // Deep Gold
+      metalness: 0.6,
+      roughness: 0.2,
       wireframe: true,
     });
     
@@ -57,12 +57,16 @@ export function Background3D() {
 
 
     // Lights
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
     scene.add(ambientLight);
     
-    const pointLight = new THREE.PointLight(0x98FB98, 5, 10);
-    pointLight.position.set(0, 0, 2);
+    const pointLight = new THREE.PointLight(0xD4AF37, 10, 20);
+    pointLight.position.set(1, 1, 2);
     scene.add(pointLight);
+
+    const pointLight2 = new THREE.PointLight(0xE2725B, 5, 15); // Terracotta accent
+    pointLight2.position.set(-2, -1, -1);
+    scene.add(pointLight2);
 
     // Mouse movement
     const mouse = new THREE.Vector2();
@@ -114,5 +118,5 @@ export function Background3D() {
     };
   }, []);
 
-  return <div ref={mountRef} className="fixed top-0 left-0 w-full h-full -z-10 opacity-30" />;
+  return <div ref={mountRef} className="fixed top-0 left-0 w-full h-full -z-10 opacity-20" />;
 }

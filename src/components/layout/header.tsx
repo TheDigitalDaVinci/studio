@@ -32,7 +32,7 @@ export function Header() {
       onClick={() => setIsMobileMenuOpen(false)}
       className={cn(
         'transition-colors text-lg md:text-sm hover:text-primary',
-        isActive ? 'text-primary font-semibold' : 'text-muted-foreground'
+        isActive ? 'text-primary font-semibold' : 'text-foreground/80'
       )}
     >
       {label}
@@ -40,7 +40,7 @@ export function Header() {
   )};
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-transparent backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 max-w-screen-2xl items-center justify-between">
         <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
           <Code className="h-6 w-6 text-primary" />

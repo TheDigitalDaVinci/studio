@@ -25,7 +25,7 @@ export function ProjectGallery({ projects }: { projects: Project[] }) {
             key={category}
             variant={activeFilter === category ? 'default' : 'outline'}
             onClick={() => setActiveFilter(category)}
-            className="capitalize"
+            className="capitalize rounded-full"
           >
             {category}
           </Button>

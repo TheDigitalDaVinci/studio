@@ -12,13 +12,13 @@ export default function Home() {
   return (
     <div className="container mx-auto px-4 py-12 md:py-20">
       <section className="text-center min-h-[60vh] flex flex-col items-center justify-center">
-        <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tight mb-4 text-primary">
+        <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-tight mb-4">
           Artistry in the Digital Age.
         </h1>
         <p className="max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground mb-8">
           Welcome to the workshop of a modern renaissance artisan. I am The Digital Da Vinci, and I blend timeless design principles with cutting-edge technology to craft unique digital experiences, from immersive games to photorealistic visualizations.
         </p>
-        <Button asChild size="lg" className="rounded-full">
+        <Button asChild size="lg">
           <Link href="/portfolio">
             Explore My Portfolio <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
@@ -30,7 +30,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {featuredProjects.map((project) => (
             <Link key={project.id} href={`/portfolio#${project.slug}`} className="group">
-              <Card className="h-full overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border-2 border-transparent hover:border-primary/50 bg-card/50 backdrop-blur-sm">
+              <Card className="h-full overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border-2 border-transparent hover:border-primary/50 bg-card/80 backdrop-blur-sm">
                 <CardHeader className="p-0">
                    <div className="aspect-video overflow-hidden">
                      <Image
@@ -44,7 +44,7 @@ export default function Home() {
                    </div>
                 </CardHeader>
                 <CardContent className="p-6">
-                  <Badge variant="secondary" className="mb-2 bg-primary/10 text-primary">{project.category}</Badge>
+                  <Badge variant="secondary" className="mb-2">{project.category}</Badge>
                   <CardTitle className="font-headline text-2xl">{project.title}</CardTitle>
                   <p className="text-muted-foreground mt-2">{project.description}</p>
                 </CardContent>
