@@ -11,7 +11,7 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 
 const navLinks = [
-  { href: '/portfolio', label: 'Portfolio' },
+  { href: 'https://nidhinzzx4.myportfolio.com/', label: 'Portfolio', external: true },
   { href: '/courses', label: 'Masterclasses' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
@@ -22,13 +22,15 @@ export function Header() {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const NavLink = ({ href, label }: { href: string; label: string }) => (
+  const NavLink = ({ href, label, external }: { href: string; label: string, external?: boolean }) => (
     <Link
       href={href}
+      target={external ? '_blank' : undefined}
+      rel={external ? 'noopener noreferrer' : undefined}
       onClick={() => setIsMobileMenuOpen(false)}
       className={cn(
         'transition-colors text-lg md:text-sm hover:text-primary',
-        pathname.startsWith(href) ? 'text-primary font-semibold' : 'text-muted-foreground'
+        !external && pathname.startsWith(href) ? 'text-primary font-semibold' : 'text-muted-foreground'
       )}
     >
       {label}
