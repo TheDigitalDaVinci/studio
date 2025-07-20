@@ -33,18 +33,18 @@ export default function ContactPage() {
                 </a>
             </div>
              <div className="flex items-center gap-4 pt-4">
-                <Link href="https://www.youtube.com/@the.digital.davinci" target="_blank" rel="noreferrer" className="p-2 rounded-full bg-muted hover:bg-primary/20 transition-colors group">
+                <a href="https://www.youtube.com/@the.digital.davinci" target="_blank" rel="noreferrer" className="p-2 rounded-full bg-muted hover:bg-primary/20 transition-colors group">
                     <Youtube className="h-6 w-6 text-muted-foreground group-hover:text-primary" />
                     <span className="sr-only">YouTube</span>
-                </Link>
-                <Link href="https://www.instagram.com/the.digital.davinci/" target="_blank" rel="noreferrer" className="p-2 rounded-full bg-muted hover:bg-primary/20 transition-colors group">
+                </a>
+                <a href="https://www.instagram.com/the.digital.davinci/" target="_blank" rel="noreferrer" className="p-2 rounded-full bg-muted hover:bg-primary/20 transition-colors group">
                     <Instagram className="h-6 w-6 text-muted-foreground group-hover:text-primary" />
                     <span className="sr-only">Instagram</span>
-                </Link>
-                <Link href="https://www.linkedin.com/in/m-nidhin-sivan-5564221b2/" target="_blank" rel="noreferrer" className="p-2 rounded-full bg-muted hover:bg-primary/20 transition-colors group">
+                </a>
+                <a href="https://www.linkedin.com/in/m-nidhin-sivan-5564221b2/" target="_blank" rel="noreferrer" className="p-2 rounded-full bg-muted hover:bg-primary/20 transition-colors group">
                     <Linkedin className="h-6 w-6 text-muted-foreground group-hover:text-primary" />
                     <span className="sr-only">LinkedIn</span>
-                </Link>
+                </a>
             </div>
         </div>
       </div>

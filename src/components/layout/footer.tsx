@@ -9,18 +9,18 @@ export function Footer() {
           © {new Date().getFullYear()} The Digital Da Vinci. All rights reserved.
         </p>
         <div className="flex items-center gap-4">
-          <Link href="https://www.youtube.com/@the.digital.davinci" target="_blank" rel="noreferrer">
+          <a href="https://www.youtube.com/@the.digital.davinci" target="_blank" rel="noreferrer">
             <Youtube className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
             <span className="sr-only">YouTube</span>
-          </Link>
-          <Link href="https://www.instagram.com/the.digital.davinci/" target="_blank" rel="noreferrer">
+          </a>
+          <a href="https://www.instagram.com/the.digital.davinci/" target="_blank" rel="noreferrer">
             <Instagram className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
             <span className="sr-only">Instagram</span>
-          </Link>
-          <Link href="https://www.linkedin.com/in/m-nidhin-sivan-5564221b2/" target="_blank" rel="noreferrer">
+          </a>
+          <a href="https://www.linkedin.com/in/m-nidhin-sivan-5564221b2/" target="_blank" rel="noreferrer">
             <Linkedin className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
             <span className="sr-only">LinkedIn</span>
-          </Link>
+          </a>
         </div>
       </div>
     </footer>
