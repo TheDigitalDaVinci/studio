@@ -28,14 +28,15 @@ export function Background3D() {
     currentMount.appendChild(renderer.domElement);
 
     // Object
-    const geometry = new THREE.TorusKnotGeometry(1.5, 0.3, 100, 16);
+    const geometry = new THREE.IcosahedronGeometry(2, 0);
     const material = new THREE.MeshStandardMaterial({
       color: 0xd4af37, // --primary color
-      metalness: 0.7,
+      metalness: 0.6,
       roughness: 0.2,
+      wireframe: true,
     });
-    const torusKnot = new THREE.Mesh(geometry, material);
-    scene.add(torusKnot);
+    const icosahedron = new THREE.Mesh(geometry, material);
+    scene.add(icosahedron);
 
     // Lights
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
@@ -65,9 +66,9 @@ export function Background3D() {
     const animate = () => {
       requestAnimationFrame(animate);
 
-      torusKnot.rotation.x += 0.001;
-      torusKnot.rotation.y += 0.001;
-      torusKnot.rotation.z = scrollY * 0.001;
+      icosahedron.rotation.x += 0.001;
+      icosahedron.rotation.y += 0.001;
+      icosahedron.rotation.z = scrollY * 0.001;
 
       renderer.render(scene, camera);
     };
@@ -83,7 +84,7 @@ export function Background3D() {
       }
       geometry.dispose();
       material.dispose();
-      scene.remove(torusKnot);
+      scene.remove(icosahedron);
     };
   }, []);
 
