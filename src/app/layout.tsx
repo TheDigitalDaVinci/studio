@@ -6,6 +6,7 @@ import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Background3D } from '@/components/layout/background-3d';
 import { CustomCursor } from '@/components/layout/custom-cursor';
+import { SiteLoader } from '@/components/layout/loader';
 
 
 export const metadata: Metadata = {
@@ -32,6 +33,7 @@ export default function RootLayout({
         />
       </head>
       <body className={cn('font-body antialiased min-h-screen flex flex-col bg-background')}>
+        <SiteLoader />
         <CustomCursor />
         <Background3D />
         <Header />
