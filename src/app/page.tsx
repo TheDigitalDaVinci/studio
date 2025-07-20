@@ -1,14 +1,18 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight } from 'lucide-react';
-import { projects } from '@/lib/data';
-import { Badge } from '@/components/ui/badge';
-import { cn } from '@/lib/utils';
+import { projects, courses } from '@/lib/data';
+import { FeaturedItemCard } from '@/components/portfolio/featured-item-card';
 
 export default function Home() {
-  const featuredProjects = projects.slice(0, 3);
+  // Combine and select a mix of featured projects and courses
+  const featuredProjects = projects.slice(0, 2);
+  const featuredCourses = courses.slice(0, 1);
+  
+  const featuredItems = [
+    ...featuredProjects.map(p => ({ ...p, type: 'project' as const })),
+    ...featuredCourses.map(c => ({ ...c, type: 'course' as const }))
+  ].sort(() => Math.random() - 0.5); // shuffle the items
 
   return (
     <div className="container mx-auto px-4 py-12 md:py-20">
@@ -29,28 +33,8 @@ export default function Home() {
       <section className="mt-20 md:mt-32">
         <h2 className="text-4xl font-headline font-bold text-center mb-12 text-foreground">Featured Creations</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {featuredProjects.map((project) => (
-            <Link key={project.id} href={`/portfolio#${project.slug}`} className="group">
-              <Card className="h-full overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 border-border bg-card/80 backdrop-blur-sm hover:border-primary/50">
-                <CardHeader className="p-0">
-                   <div className="aspect-video overflow-hidden">
-                     <Image
-                      src={project.image}
-                      alt={project.title}
-                      width={600}
-                      height={400}
-                      className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
-                      data-ai-hint={`${project.category} design`}
-                    />
-                   </div>
-                </CardHeader>
-                <CardContent className="p-6">
-                  <Badge variant="secondary" className="mb-2">{project.category}</Badge>
-                  <CardTitle className="text-2xl font-headline text-foreground">{project.title}</CardTitle>
-                  <p className="text-muted-foreground mt-2">{project.description}</p>
-                </CardContent>
-              </Card>
-            </Link>
+          {featuredItems.map((item) => (
+             <FeaturedItemCard key={`${item.type}-${item.id}`} item={item} />
           ))}
         </div>
       </section>
