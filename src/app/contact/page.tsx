@@ -1,5 +1,5 @@
 import { ContactForm } from '@/components/contact/contact-form';
-import { Github, Linkedin, Twitter, Mail, Phone } from 'lucide-react';
+import { Youtube, Instagram, Linkedin, Mail, Phone } from 'lucide-react';
 import Link from 'next/link';
 
 export default function ContactPage() {
@@ -33,17 +33,17 @@ export default function ContactPage() {
                 </a>
             </div>
              <div className="flex items-center gap-4 pt-4">
-                <Link href="#" target="_blank" rel="noreferrer" className="p-2 rounded-full bg-muted hover:bg-primary/20 transition-colors">
-                    <Github className="h-6 w-6 text-muted-foreground group-hover:text-primary" />
-                    <span className="sr-only">GitHub</span>
+                <Link href="https://www.youtube.com/@the.digital.davinci" target="_blank" rel="noreferrer" className="p-2 rounded-full bg-muted hover:bg-primary/20 transition-colors group">
+                    <Youtube className="h-6 w-6 text-muted-foreground group-hover:text-primary" />
+                    <span className="sr-only">YouTube</span>
                 </Link>
-                <Link href="#" target="_blank" rel="noreferrer" className="p-2 rounded-full bg-muted hover:bg-primary/20 transition-colors">
+                <Link href="#" target="_blank" rel="noreferrer" className="p-2 rounded-full bg-muted hover:bg-primary/20 transition-colors group">
+                    <Instagram className="h-6 w-6 text-muted-foreground group-hover:text-primary" />
+                    <span className="sr-only">Instagram</span>
+                </Link>
+                <Link href="#" target="_blank" rel="noreferrer" className="p-2 rounded-full bg-muted hover:bg-primary/20 transition-colors group">
                     <Linkedin className="h-6 w-6 text-muted-foreground group-hover:text-primary" />
                     <span className="sr-only">LinkedIn</span>
-                </Link>
-                <Link href="#" target="_blank" rel="noreferrer" className="p-2 rounded-full bg-muted hover:bg-primary/20 transition-colors">
-                    <Twitter className="h-6 w-6 text-muted-foreground group-hover:text-primary" />
-                    <span className="sr-only">Twitter</span>
                 </Link>
             </div>
         </div>

@@ -1,4 +1,4 @@
-import { Github, Linkedin, Twitter } from 'lucide-react';
+import { Youtube, Instagram, Linkedin } from 'lucide-react';
 import Link from 'next/link';
 
 export function Footer() {
@@ -9,17 +9,17 @@ export function Footer() {
           © {new Date().getFullYear()} The Digital Da Vinci. All rights reserved.
         </p>
         <div className="flex items-center gap-4">
+          <Link href="https://www.youtube.com/@the.digital.davinci" target="_blank" rel="noreferrer">
+            <Youtube className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
+            <span className="sr-only">YouTube</span>
+          </Link>
           <Link href="#" target="_blank" rel="noreferrer">
-            <Github className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
-            <span className="sr-only">GitHub</span>
+            <Instagram className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
+            <span className="sr-only">Instagram</span>
           </Link>
           <Link href="#" target="_blank" rel="noreferrer">
             <Linkedin className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
             <span className="sr-only">LinkedIn</span>
-          </Link>
-          <Link href="#" target="_blank" rel="noreferrer">
-            <Twitter className="h-5 w-5 text-muted-foreground hover:text-primary transition-colors" />
-            <span className="sr-only">Twitter</span>
           </Link>
         </div>
       </div>
