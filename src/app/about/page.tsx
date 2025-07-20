@@ -12,9 +12,14 @@ export default function AboutPage() {
               The Digital Da Vinci
             </h1>
             <p className="text-xl text-primary font-semibold mb-6">A Modern Renaissance Artisan</p>
-            <p className="text-muted-foreground text-lg">
-              I am a digital artisan specializing in the fusion of technology and design. From photorealistic architectural visualizations to immersive game worlds and interactive web applications, I bring ideas to life with a blend of technical skill and creative vision.
-            </p>
+            <div className="space-y-4 text-muted-foreground text-lg">
+                <p>
+                    I’m a Civil Engineering graduate turned 3D Visualizer, passionate about transforming ideas into immersive digital experiences. With advanced skills in tools like SketchUp and D5 Render, I specialize in architectural and interior visualization that merges technical precision with visual storytelling.
+                </p>
+                <p>
+                    Through the Digital DaVinci Lab, I go beyond 3D visualization—exploring the intersection of design, code, and community. From creating interactive, community-driven web apps to experimenting with game development through "vibe coding", my work reflects a commitment to blending creativity with technology to solve real-world problems and inspire innovation.
+                </p>
+            </div>
             <div className="mt-8 space-y-4">
               <h3 className="font-headline text-2xl font-semibold">My Expertise</h3>
               <ul className="space-y-3 text-muted-foreground">
