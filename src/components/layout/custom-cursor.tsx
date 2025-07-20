@@ -1,11 +1,12 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
 export function CustomCursor() {
   const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [isHovering, setIsHovering] = useState(false);
+  const [variant, setVariant] = useState('default');
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -19,21 +20,21 @@ export function CustomCursor() {
       setPosition({ x: e.clientX, y: e.clientY });
     };
 
-    const onMouseEnter = () => setIsHovering(true);
-    const onMouseLeave = () => setIsHovering(false);
+    const onMouseEnterLink = () => setVariant('link');
+    const onMouseLeaveLink = () => setVariant('default');
 
     document.addEventListener('mousemove', onMouseMove);
 
     document.querySelectorAll('a, button, [role="button"], [data-cursor-hover]').forEach(el => {
-      el.addEventListener('mouseenter', onMouseEnter);
-      el.addEventListener('mouseleave', onMouseLeave);
+      el.addEventListener('mouseenter', onMouseEnterLink);
+      el.addEventListener('mouseleave', onMouseLeaveLink);
     });
 
     return () => {
       document.removeEventListener('mousemove', onMouseMove);
-       document.querySelectorAll('a, button, [role="button"], [data-cursor-hover]').forEach(el => {
-        el.removeEventListener('mouseenter', onMouseEnter);
-        el.removeEventListener('mouseleave', onMouseLeave);
+      document.querySelectorAll('a, button, [role="button"], [data-cursor-hover]').forEach(el => {
+        el.removeEventListener('mouseenter', onMouseEnterLink);
+        el.removeEventListener('mouseleave', onMouseLeaveLink);
       });
     };
   }, [isClient]);
@@ -41,28 +42,33 @@ export function CustomCursor() {
   if (!isClient) {
     return null;
   }
+  
+  const variants = {
+    default: {
+      width: 12,
+      height: 12,
+      backgroundColor: 'hsl(var(--foreground))',
+      mixBlendMode: 'difference' as const,
+    },
+    link: {
+      width: 60,
+      height: 60,
+      backgroundColor: 'hsl(var(--primary))',
+      mixBlendMode: 'normal' as const,
+      opacity: 0.2,
+    },
+  };
 
   return (
-    <>
-      <div
-        className={cn(
-          'fixed pointer-events-none -translate-x-1/2 -translate-y-1/2 z-[9999] transition-transform duration-300 ease-out',
-        )}
-        style={{ left: `${position.x}px`, top: `${position.y}px` }}
-      >
-        <div className={cn(
-            'w-2 h-2 rounded-full bg-primary transition-all duration-300',
-            isHovering ? 'scale-150' : 'scale-100'
-        )} />
-      </div>
-       <div
-        className={cn(
-          'fixed pointer-events-none -translate-x-1/2 -translate-y-1/2 z-[9999] transition-transform duration-100 ease-out',
-          'w-10 h-10 rounded-full border-2 border-primary/50',
-          isHovering ? 'scale-150 opacity-0' : 'scale-100'
-        )}
-        style={{ left: `${position.x}px`, top: `${position.y}px` }}
-      />
-    </>
+    <motion.div
+      className="fixed top-0 left-0 pointer-events-none -translate-x-1/2 -translate-y-1/2 z-[9999] rounded-full"
+      variants={variants}
+      animate={variant}
+      transition={{ type: 'spring', stiffness: 200, damping: 20 }}
+      style={{
+        left: `${position.x}px`,
+        top: `${position.y}px`,
+      }}
+    />
   );
 }
