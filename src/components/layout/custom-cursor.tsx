@@ -1,32 +1,35 @@
 'use client';
 import { useEffect, useState } from 'react';
 
-const CURSOR_TRAIL_COUNT = 8;
+const CURSOR_TRAIL_COUNT = 10;
 
 const CursorDot = ({ position, isHovering, index }: { position: { x: number; y: number }, isHovering: boolean, index: number }) => {
   const isMainDot = index === 0;
-  const size = isMainDot ? (isHovering ? 30 : 20) : 20;
-  const opacity = (CURSOR_TRAIL_COUNT - index) / CURSOR_TRAIL_COUNT;
-
+  
+  // Main dot is larger and changes on hover
+  const size = isMainDot ? (isHovering ? 24 : 16) : 2;
+  const opacity = isMainDot ? 1 : 1 - index / CURSOR_TRAIL_COUNT;
+  const scale = isMainDot ? 1 : 1 - index / CURSOR_TRAIL_COUNT;
+  
   return (
     <div
       style={{
         left: `${position.x}px`,
         top: `${position.y}px`,
         width: `${size}px`,
-        height: isMainDot ? (isHovering ? 10 : 20) : '20px',
-        opacity: isMainDot ? 1 : opacity,
-        transform: `translate(-50%, -50%) scale(${1 - index * 0.1})`,
-        transition: `transform 0.2s, width 0.3s, height 0.3s, top ${0.03 * index}s, left ${0.03 * index}s`,
+        height: `${size}px`,
+        opacity: opacity,
+        transform: `translate(-50%, -50%) scale(${scale})`,
+        transition: `width 0.2s, height 0.2s, top ${0.01 * index}s, left ${0.01 * index}s`,
       }}
-      className="fixed pointer-events-none z-[9999] rounded-full bg-primary transition-[transform,width,height,opacity] ease-out"
+      className={`fixed pointer-events-none z-[9999] bg-primary transition-[width,height,opacity] ease-out ${isMainDot ? 'rounded-full' : ''}`}
     ></div>
   );
 };
 
 
 export function CustomCursor() {
-  const [positions, setPositions] = useState(Array(CURSOR_TRAIL_COUNT).fill({ x: 0, y: 0 }));
+  const [positions, setPositions] = useState(Array(CURSOR_TRAIL_COUNT).fill({ x: -100, y: -100 }));
   const [isHovering, setIsHovering] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
