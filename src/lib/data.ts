@@ -7,7 +7,7 @@ export const projects: Project[] = [
     slug: 'residence-design',
     description: 'A virtual walkthrough of a modern residence. Click to explore.',
     longDescription: "Explore a fully interactive, real-time architectural visualization of a modern residence. This project allows users to walk through a beautifully rendered home, showcasing advanced lighting, high-fidelity assets, and a seamless user experience for virtual exploration.",
-    image: '/residence-design.png',
+    image: '/residence-exterior.jpg',
     category: 'Archviz',
     tags: ['D5 Render', 'Archviz', 'Real-time', 'Virtual Tour'],
     externalUrl: 'https://nixmo4.github.io/Bineesh-s-Residence-Virtual-Walk-Through/',
