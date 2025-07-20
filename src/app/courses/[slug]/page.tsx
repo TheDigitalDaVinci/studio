@@ -32,14 +32,14 @@ export default function CourseDetailPage({ params }: { params: { slug: string } 
             />
           </div>
           <div className="prose prose-lg prose-invert max-w-none text-foreground/90 leading-relaxed space-y-6">
-            <h1 className="text-4xl md:text-5xl font-black tracking-tighter mb-4 text-foreground">{course.title}</h1>
+            <h1 className="text-4xl md:text-5xl font-headline font-bold tracking-tighter mb-4 text-foreground">{course.title}</h1>
             <p className="text-muted-foreground">{course.longDescription}</p>
           </div>
         </div>
         <aside className="lg:col-span-1">
           <div className="sticky top-24">
             <div className="bg-card/80 backdrop-blur-sm rounded-lg border border-border p-6">
-              <h2 className="text-2xl mb-4 font-semibold text-foreground">Course Details</h2>
+              <h2 className="text-2xl mb-4 font-headline font-semibold text-foreground">Course Details</h2>
               <div className="space-y-4 text-lg">
                 <div className="flex items-center gap-3">
                   <IndianRupee className="h-6 w-6 text-primary" />
@@ -61,7 +61,7 @@ export default function CourseDetailPage({ params }: { params: { slug: string } 
             </div>
 
             <div className="bg-card/80 backdrop-blur-sm rounded-lg border border-border p-6 mt-8">
-              <h3 className="text-xl mb-4 font-semibold text-foreground">What You'll Learn</h3>
+              <h3 className="text-xl mb-4 font-headline font-semibold text-foreground">What You'll Learn</h3>
               <ul className="space-y-3">
                 {course.topics.map((topic, index) => (
                   <li key={index} className="flex items-start gap-3">

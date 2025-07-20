@@ -30,7 +30,7 @@ export function ProjectCard({ project }: { project: Project }) {
         </CardHeader>
         <CardContent className="p-6">
           <Badge variant="secondary" className="mb-2">{project.category}</Badge>
-          <CardTitle className="text-2xl text-foreground">{project.title}</CardTitle>
+          <CardTitle className="text-2xl font-headline text-foreground">{project.title}</CardTitle>
           <p className="text-muted-foreground mt-2">{project.description}</p>
         </CardContent>
       </Card>

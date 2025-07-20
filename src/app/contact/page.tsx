@@ -6,7 +6,7 @@ export default function ContactPage() {
   return (
     <div className="container mx-auto px-4 py-12">
        <div className="text-center mb-12">
-        <h1 className="text-5xl md:text-6xl font-black tracking-tighter text-foreground">Get In Touch</h1>
+        <h1 className="text-5xl md:text-6xl font-headline font-bold tracking-tighter text-foreground">Get In Touch</h1>
         <p className="max-w-2xl mx-auto text-lg text-muted-foreground mt-4">
           Have a project in mind or just want to say hello? I'd love to hear from you.
         </p>
@@ -14,11 +14,11 @@ export default function ContactPage() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
         <div className="bg-card/80 backdrop-blur-sm p-8 rounded-lg border border-border">
-          <h2 className="text-3xl mb-6 font-semibold text-foreground">Send a Message</h2>
+          <h2 className="text-3xl mb-6 font-headline font-semibold text-foreground">Send a Message</h2>
           <ContactForm />
         </div>
         <div className="flex flex-col justify-center space-y-6">
-            <h3 className="text-3xl font-semibold text-foreground">Contact Information</h3>
+            <h3 className="text-3xl font-headline font-semibold text-foreground">Contact Information</h3>
             <p className="text-muted-foreground">
                 Feel free to reach out through any of these channels. I'm always open to discussing new projects, creative ideas, or opportunities to be part of an ambitious vision.
             </p>

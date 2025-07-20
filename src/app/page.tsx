@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className="container mx-auto px-4 py-12 md:py-20">
       <section className="text-center min-h-[60vh] flex flex-col items-center justify-center">
-        <h1 className="text-5xl md:text-7xl font-black tracking-tighter mb-4 text-foreground">
+        <h1 className="text-5xl md:text-7xl font-headline font-bold tracking-tighter mb-4 text-foreground">
           Artistry in the Digital Age.
         </h1>
         <p className="max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground mb-8">
@@ -27,7 +27,7 @@ export default function Home() {
       </section>
 
       <section className="mt-20 md:mt-32">
-        <h2 className="text-4xl font-bold text-center mb-12 text-foreground">Featured Creations</h2>
+        <h2 className="text-4xl font-headline font-bold text-center mb-12 text-foreground">Featured Creations</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {featuredProjects.map((project) => (
             <Link key={project.id} href={`/portfolio#${project.slug}`} className="group">
@@ -46,7 +46,7 @@ export default function Home() {
                 </CardHeader>
                 <CardContent className="p-6">
                   <Badge variant="secondary" className="mb-2">{project.category}</Badge>
-                  <CardTitle className="text-2xl text-foreground">{project.title}</CardTitle>
+                  <CardTitle className="text-2xl font-headline text-foreground">{project.title}</CardTitle>
                   <p className="text-muted-foreground mt-2">{project.description}</p>
                 </CardContent>
               </Card>
