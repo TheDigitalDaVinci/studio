@@ -16,7 +16,6 @@ const navLinks = [
   { href: '/courses', label: 'Masterclasses' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
-  { href: '/recommendations', label: 'AI Recommendations' },
 ];
 
 export function Header() {
