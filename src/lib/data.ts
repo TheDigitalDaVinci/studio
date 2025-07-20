@@ -18,7 +18,7 @@ export const projects: Project[] = [
     slug: 'neon-drifters',
     description: 'A fast-paced, retro-futuristic racing game for mobile devices.',
     longDescription: 'Neon Drifters is a vibrant, arcade-style racing game developed in Unity. I was responsible for the overall art direction, 3D modeling of the vehicles, and environment design. The game features a unique synthwave-inspired aesthetic and optimized performance for a smooth experience on a wide range of mobile devices.',
-    image: 'https://placehold.co/600x400.png',
+    image: '/residence-design.png',
     category: 'Games',
     tags: ['Unity', 'Game Dev', '3D Modeling', 'Mobile'],
   },
