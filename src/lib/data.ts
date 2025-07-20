@@ -71,38 +71,26 @@ export const projects: Project[] = [
 export const courses: Course[] = [
     {
       id: 1,
-      title: 'Unreal Engine 5 for Photorealistic Archviz',
-      slug: 'unreal-engine-5-archviz',
-      description: 'Master the art of creating stunning, real-time architectural visualizations.',
-      longDescription: 'Go from zero to hero in the world of real-time archviz. This course covers everything from importing models and setting up materials to advanced lighting with Lumen and creating cinematic sequences. You\'ll learn the complete workflow for producing photorealistic visuals that will wow your clients.',
+      title: 'Exterior Rendering Masterclass',
+      slug: 'exterior-rendering-masterclass',
+      description: 'Master the art of creating stunning, real-time exterior architectural visualizations.',
+      longDescription: 'Go from zero to hero in the world of real-time exterior archviz. This course covers everything from importing models and setting up materials to advanced lighting with Lumen and creating cinematic sequences. You\'ll learn the complete workflow for producing photorealistic visuals that will wow your clients.',
       image: 'https://placehold.co/600x400.png',
-      price: 499,
+      price: 399,
       level: 'Advanced',
-      duration: '8 Weeks',
-      topics: ['Advanced Lumen Lighting', 'DataSmith Workflows', 'Material Creation', 'Cinematic Renders', 'Performance Optimization']
+      duration: '6 Weeks',
+      topics: ['Advanced Lumen Lighting', 'Environment & Foliage', 'Material Creation', 'Cinematic Renders', 'Performance Optimization']
     },
     {
       id: 2,
-      title: 'Creative Coding with Three.js',
-      slug: 'creative-coding-threejs',
-      description: 'Learn to create beautiful, interactive 3D web experiences from scratch.',
-      longDescription: 'Unlock the power of WebGL with Three.js. This course is for developers and artists who want to bring their ideas to life on the web. We will cover the fundamentals of 3D graphics, shader programming (GLSL), and creating generative art. You\'ll build several projects, including an interactive particle system and a procedurally generated landscape.',
+      title: 'Interior Rendering Masterclass',
+      slug: 'interior-rendering-masterclass',
+      description: 'Learn to create beautiful, interactive 3D interior experiences from scratch.',
+      longDescription: 'Unlock the power of photorealistic interior rendering. This course is for developers and artists who want to bring their ideas to life. We will cover the fundamentals of 3D lighting, material properties, and creating stunning interior scenes. You\'ll build several projects, including a modern living room and a cozy bedroom scene.',
       image: 'https://placehold.co/600x400.png',
-      price: 299,
-      level: 'Intermediate',
+      price: 399,
+      level: 'Advanced',
       duration: '6 Weeks',
-      topics: ['3D Scene Setup', 'Custom Shaders (GLSL)', 'Post-processing Effects', 'Generative Geometry', 'Performance on the Web']
-    },
-    {
-      id: 3,
-      title: 'Intro to 3D Modeling with Blender',
-      slug: 'intro-to-blender',
-      description: 'A beginner\'s guide to the fundamentals of 3D modeling and rendering.',
-      longDescription: 'New to 3D? This course is the perfect starting point. We will cover the Blender interface, essential modeling tools, basic texturing, and lighting principles. By the end, you\'ll have the confidence to create your own 3D assets and produce beautiful renders for your portfolio.',
-      image: 'https://placehold.co/600x400.png',
-      price: 149,
-      level: 'Beginner',
-      duration: '4 Weeks',
-      topics: ['Blender UI & Navigation', 'Polygon Modeling Techniques', 'UV Unwrapping', 'Basic Materials & Shading', 'Rendering with Cycles']
+      topics: ['3D Scene Setup', 'Advanced Material Properties', 'Post-processing Effects', 'Lighting Techniques', 'Camera & Composition']
     },
   ];
