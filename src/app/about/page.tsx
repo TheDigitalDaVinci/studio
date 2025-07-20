@@ -20,27 +20,6 @@ export default function AboutPage() {
                     Through the Digital DaVinci Lab, I go beyond 3D visualization—exploring the intersection of design, code, and community. From creating interactive, community-driven web apps to experimenting with game development through "vibe coding", my work reflects a commitment to blending creativity with technology to solve real-world problems and inspire innovation.
                 </p>
             </div>
-            <div className="mt-8 space-y-4">
-              <h3 className="font-headline text-2xl font-semibold">My Expertise</h3>
-              <ul className="space-y-3 text-muted-foreground">
-                <li className="flex items-center gap-3">
-                  <Check className="h-5 w-5 text-primary" />
-                  <span>Architectural & Product Visualization</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <Check className="h-5 w-5 text-primary" />
-                  <span>Game Environment & Asset Creation</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <Check className="h-5 w-5 text-primary" />
-                  <span>Interactive Web Experiences (WebGL/Three.js)</span>
-                </li>
-                 <li className="flex items-center gap-3">
-                  <Check className="h-5 w-5 text-primary" />
-                  <span>UI/UX Design for Apps & Games</span>
-                </li>
-              </ul>
-            </div>
           </div>
           <div className="relative min-h-[300px] md:min-h-0">
             <Image
