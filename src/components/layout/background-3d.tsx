@@ -26,11 +26,11 @@ export function Background3D() {
     particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
     
     const particlesMaterial = new THREE.PointsMaterial({
-      color: 0xffac33, // Rich Gold
+      color: 0x333333,
       size: 0.02,
       sizeAttenuation: true,
       transparent: true,
-      opacity: 0.7
+      opacity: 0.5
     });
     
     const particles = new THREE.Points(particlesGeometry, particlesMaterial);
