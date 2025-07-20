@@ -23,13 +23,13 @@ export default function ContactPage() {
                 Feel free to reach out through any of these channels. I'm always open to discussing new projects, creative ideas, or opportunities to be part of an ambitious vision.
             </p>
             <div className="space-y-4">
-                <a href="mailto:contact@digitaldavinci.com" className="flex items-center gap-4 group">
+                <a href="mailto:mnidhinsivan@gmail.com" className="flex items-center gap-4 group">
                     <Mail className="h-6 w-6 text-primary"/>
-                    <span className="text-lg text-muted-foreground group-hover:text-primary transition-colors">contact@digitaldavinci.com</span>
+                    <span className="text-lg text-muted-foreground group-hover:text-primary transition-colors">mnidhinsivan@gmail.com</span>
                 </a>
-                 <a href="tel:+1234567890" className="flex items-center gap-4 group">
+                 <a href="tel:+919562708533" className="flex items-center gap-4 group">
                     <Phone className="h-6 w-6 text-primary"/>
-                    <span className="text-lg text-muted-foreground group-hover:text-primary transition-colors">+1 (234) 567-890</span>
+                    <span className="text-lg text-muted-foreground group-hover:text-primary transition-colors">+91 9562708533</span>
                 </a>
             </div>
              <div className="flex items-center gap-4 pt-4">
