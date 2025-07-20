@@ -12,10 +12,10 @@ export default function Home() {
 
   const featuredItems = [
     featuredArchviz && { ...featuredArchviz, type: 'project' as const },
-    featuredGame && { ...featuredGame, type: 'project' as const },
-    featuredApp && { ...featuredApp, type: 'project' as const },
     featuredCourse && { ...featuredCourse, type: 'course' as const },
-  ].filter(Boolean).sort(() => Math.random() - 0.5); // Filter out undefined and shuffle
+    featuredApp && { ...featuredApp, type: 'project' as const },
+    featuredGame && { ...featuredGame, type: 'project' as const },
+  ].filter(Boolean);
 
   return (
     <div className="container mx-auto px-4 py-12 md:py-20">
