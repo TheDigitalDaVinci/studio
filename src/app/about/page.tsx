@@ -9,7 +9,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 md:grid-cols-2">
           <div className="p-8 md:p-12 flex flex-col justify-center">
             <h1 className="font-headline text-5xl md:text-6xl font-bold tracking-tighter mb-4">
-              The Digital Da Vinci
+              The Digital <br /> Da Vinci
             </h1>
             <p className="text-xl text-primary font-semibold mb-6">A Modern Renaissance Artisan</p>
             <div className="space-y-4 text-muted-foreground text-lg">
