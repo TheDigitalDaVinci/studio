@@ -76,7 +76,7 @@ export const courses: Course[] = [
       description: 'Master the art of creating stunning, real-time exterior architectural visualizations.',
       longDescription: 'Go from zero to hero in the world of real-time exterior archviz. This course covers everything from importing models and setting up materials to advanced lighting with Lumen and creating cinematic sequences. You\'ll learn the complete workflow for producing photorealistic visuals that will wow your clients.',
       image: 'https://placehold.co/600x400.png',
-      price: 399,
+      price: 1999,
       level: 'Advanced',
       duration: '6 Weeks',
       topics: ['Advanced Lumen Lighting', 'Environment & Foliage', 'Material Creation', 'Cinematic Renders', 'Performance Optimization']
@@ -88,7 +88,7 @@ export const courses: Course[] = [
       description: 'Learn to create beautiful, interactive 3D interior experiences from scratch.',
       longDescription: 'Unlock the power of photorealistic interior rendering. This course is for developers and artists who want to bring their ideas to life. We will cover the fundamentals of 3D lighting, material properties, and creating stunning interior scenes. You\'ll build several projects, including a modern living room and a cozy bedroom scene.',
       image: 'https://placehold.co/600x400.png',
-      price: 399,
+      price: 2999,
       level: 'Advanced',
       duration: '6 Weeks',
       topics: ['3D Scene Setup', 'Advanced Material Properties', 'Post-processing Effects', 'Lighting Techniques', 'Camera & Composition']

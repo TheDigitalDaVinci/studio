@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { courses } from '@/lib/data';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Check, BarChart, Clock, DollarSign } from 'lucide-react';
+import { Check, BarChart, Clock, IndianRupee } from 'lucide-react';
 
 export async function generateStaticParams() {
   return courses.map((course) => ({
@@ -42,8 +42,8 @@ export default function CourseDetailPage({ params }: { params: { slug: string } 
               <h2 className="font-headline text-2xl mb-4">Course Details</h2>
               <div className="space-y-4 text-lg">
                 <div className="flex items-center gap-3">
-                  <DollarSign className="h-5 w-5 text-primary" />
-                  <span className="font-bold text-2xl">${course.price}</span>
+                  <IndianRupee className="h-6 w-6 text-primary" />
+                  <span className="font-bold text-2xl">{course.price}</span>
                 </div>
                 <div className="flex items-center gap-3 text-muted-foreground">
                   <BarChart className="h-5 w-5 text-primary" />

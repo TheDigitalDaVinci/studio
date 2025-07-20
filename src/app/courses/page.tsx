@@ -33,7 +33,7 @@ export default function CoursesPage() {
               <CardContent className="p-6">
                 <div className="flex justify-between items-center mb-2">
                    <Badge variant="secondary" className="bg-accent text-accent-foreground">{course.level}</Badge>
-                   <p className="text-lg font-semibold text-primary">${course.price}</p>
+                   <p className="text-lg font-semibold text-primary">₹{course.price}</p>
                 </div>
                 <CardTitle className="font-headline text-2xl">{course.title}</CardTitle>
                 <CardDescription className="mt-2">{course.description}</CardDescription>
