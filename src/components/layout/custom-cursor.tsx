@@ -9,6 +9,28 @@ const CursorDot = ({ position, isHovering, index }: { position: { x: number; y: 
   const size = isMainDot ? 8 : 4; 
   const opacity = 1 - index / CURSOR_TRAIL_COUNT;
 
+  if (isMainDot) {
+    return (
+      <div
+        style={{
+          left: `${position.x}px`,
+          top: `${position.y}px`,
+          width: `${size}px`,
+          height: `${size}px`,
+        }}
+        className={`fixed pointer-events-none z-[9999] rounded-full bg-primary transition-[width,height] ease-out`}
+      >
+        <div
+          className="absolute inset-0 rounded-full border border-foreground/80 transition-all duration-300"
+          style={{
+            transform: isHovering ? 'scale(4)' : 'scale(0)',
+            opacity: isHovering ? 1 : 0,
+          }}
+        />
+      </div>
+    );
+  }
+
   return (
     <div
       style={{
@@ -18,20 +40,10 @@ const CursorDot = ({ position, isHovering, index }: { position: { x: number; y: 
         height: `${size}px`,
         opacity: opacity,
         transform: `translate(-50%, -50%)`,
-        transition: isMainDot ? `width 0.2s, height 0.2s, top 0s, left 0s` : `top ${0.02 * index}s, left ${0.02 * index}s`,
+        transition: `top ${0.02 * index}s, left ${0.02 * index}s`,
       }}
-      className={`fixed pointer-events-none z-[9999] rounded-full bg-primary transition-[width,height,opacity,transform] ease-out`}
-    >
-      {isMainDot && (
-        <div
-          className="absolute inset-0 rounded-full border border-primary transition-all duration-300"
-          style={{
-            transform: isHovering ? 'scale(4)' : 'scale(0)',
-            opacity: isHovering ? 1 : 0,
-          }}
-        />
-      )}
-    </div>
+      className={`fixed pointer-events-none z-[9998] rounded-full bg-primary/50 transition-opacity ease-out`}
+    />
   );
 };
 
