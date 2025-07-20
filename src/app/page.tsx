@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ArrowRight } from 'lucide-react';
 import { projects } from '@/lib/data';
 import { Badge } from '@/components/ui/badge';
+import { cn } from '@/lib/utils';
 
 export default function Home() {
   const featuredProjects = projects.slice(0, 3);
@@ -18,7 +19,7 @@ export default function Home() {
         <p className="max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground mb-8">
           Welcome to the workshop of a modern renaissance artisan. I am The Digital Da Vinci, and I blend timeless design principles with cutting-edge technology to craft unique digital experiences, from immersive games to photorealistic visualizations.
         </p>
-        <Button asChild size="lg">
+        <Button asChild size="lg" className="hover:bg-primary-foreground hover:text-primary border-2 border-primary transition-all duration-300">
           <Link href="/portfolio">
             Explore My Portfolio <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
