@@ -19,7 +19,7 @@ export default function Home() {
         <p className="max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground mb-8">
           Welcome to the workshop of a modern renaissance artisan. I am The Digital Da Vinci, and I blend timeless design principles with cutting-edge technology to craft unique digital experiences.
         </p>
-        <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-foreground hover:text-background transition-all duration-300 group">
+        <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-background hover:text-primary border border-transparent hover:border-primary transition-all duration-300 group">
           <Link href="/portfolio">
             Explore My Portfolio <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
           </Link>
