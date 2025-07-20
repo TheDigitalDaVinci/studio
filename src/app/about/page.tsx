@@ -13,13 +13,10 @@ export default function AboutPage() {
             <p className="text-xl text-primary font-semibold mb-6">A Modern Renaissance Artisan</p>
             <div className="space-y-4 text-muted-foreground text-lg">
               <p>
-                In an age of specialization, I choose to be a polymath. Like the masters of the Renaissance, I believe that art and science are not separate disciplines, but two sides of the same coin of human creativity. My workshop is not filled with marble and canvas, but with pixels, polygons, and lines of code.
+                I’m a Civil Engineering graduate turned 3D Visualizer, passionate about transforming ideas into immersive digital experiences. With advanced skills in tools like SketchUp and D5 Render, I specialize in architectural and interior visualization that merges technical precision with visual storytelling.
               </p>
               <p>
-                My journey began with a fascination for the virtual worlds of video games and the impossible architecture seen in films. This led me down a rabbit hole of 3D modeling, game development, and interactive design. I found that the same principles that guide a painter's brush or a sculptor's chisel—composition, light, form, and story—are just as crucial in the digital realm.
-              </p>
-              <p>
-                As "The Digital Da Vinci," my mission is to bridge the gap between technology and artistry. I don't just build apps; I craft experiences. I don't just create models; I breathe life into virtual objects. Each project is an experiment, a synthesis of ideas, and a testament to the endless possibilities of digital creation.
+                Through Digital DaVinci Lab, I go beyond 3D visualization—exploring the intersection of design, code, and community. From creating interactive, community-driven web apps to experimenting with game development through vibe coding, my work reflects a commitment to blending creativity with technology to solve real-world problems and inspire innovation.
               </p>
             </div>
           </div>
