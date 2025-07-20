@@ -17,32 +17,24 @@ export function Background3D() {
     renderer.setPixelRatio(window.devicePixelRatio);
     currentMount.appendChild(renderer.domElement);
 
-    // Deconstructed sphere
-    const group = new THREE.Group();
-    scene.add(group);
-
-    const geometry = new THREE.SphereGeometry(2, 32, 16);
+    const particlesCount = 5000;
+    const positions = new Float32Array(particlesCount * 3);
+    for(let i = 0; i < particlesCount * 3; i++) {
+        positions[i] = (Math.random() - 0.5) * 10;
+    }
+    const particlesGeometry = new THREE.BufferGeometry();
+    particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
     
-    // Points material for a particle effect
-    const pointsMaterial = new THREE.PointsMaterial({
-      color: 0xc47f2f, // Gold color
-      size: 0.03,
-      transparent: true,
-      opacity: 0.7,
+    const particlesMaterial = new THREE.PointsMaterial({
+      color: 0x00ff99,
+      size: 0.02,
       sizeAttenuation: true,
-    });
-    const points = new THREE.Points(geometry, pointsMaterial);
-    group.add(points);
-
-    // Wireframe for structure
-    const wireframeMaterial = new THREE.MeshBasicMaterial({
-      color: 0x9a5c49, // Terracotta color
-      wireframe: true,
       transparent: true,
-      opacity: 0.1,
+      opacity: 0.7
     });
-    const wireframe = new THREE.Mesh(geometry, wireframeMaterial);
-    group.add(wireframe);
+    
+    const particles = new THREE.Points(particlesGeometry, particlesMaterial);
+    scene.add(particles);
 
     camera.position.z = 5;
 
@@ -54,12 +46,19 @@ export function Background3D() {
     };
     window.addEventListener('mousemove', handleMouseMove);
 
+    const clock = new THREE.Clock();
+
     const animate = () => {
-      requestAnimationFrame(animate);
-      // Subtle rotation and mouse follow
-      group.rotation.x += (mouse.y * 0.2 - group.rotation.x) * 0.02;
-      group.rotation.y += (mouse.x * 0.2 - group.rotation.y) * 0.02;
+      const elapsedTime = clock.getElapsedTime();
+      
+      particles.rotation.y = elapsedTime * 0.05;
+      
+      camera.position.x += (mouse.x * 0.5 - camera.position.x) * 0.02;
+      camera.position.y += (-mouse.y * 0.5 - camera.position.y) * 0.02;
+      camera.lookAt(scene.position);
+
       renderer.render(scene, camera);
+      requestAnimationFrame(animate);
     };
     animate();
 
