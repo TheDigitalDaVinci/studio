@@ -54,13 +54,14 @@ export const projects: Project[] = [
   },
   {
     id: 6,
-    title: 'Urban Oasis',
-    slug: 'urban-oasis',
-    description: 'Photorealistic rendering of a sustainable co-living space.',
-    longDescription: 'This archviz project focused on creating photorealistic renderings of a new sustainable apartment complex. Using 3ds Max and V-Ray, I translated architectural blueprints into compelling visual stories that highlighted the green spaces, natural light, and community-focused design of the building.',
+    title: 'Hospital Reception',
+    slug: 'hospital-reception',
+    description: 'A virtual walkthrough of a modern hospital reception. Click to explore.',
+    longDescription: 'This archviz project provides an interactive virtual tour of a hospital reception area. The walkthrough was created to give stakeholders a realistic feel for the space before construction, focusing on patient flow, material finishes, and ambient lighting.',
     image: 'https://placehold.co/600x400.png',
     category: 'Archviz',
-    tags: ['3ds Max', 'V-Ray', 'Archviz', 'Sustainability'],
+    tags: ['D5 Render', 'Archviz', 'Virtual Tour', 'Healthcare Design'],
+    externalUrl: 'https://nixmo4.github.io/SNIMS-Reception/',
   },
 ];
 
