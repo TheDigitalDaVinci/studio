@@ -5,6 +5,8 @@ import type { Project } from '@/types';
 import { Button } from '@/components/ui/button';
 import { ProjectCard } from './project-card';
 import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 
 type ProjectCategory = 'All' | Project['category'];
 
@@ -31,6 +33,16 @@ export function ProjectGallery({ projects }: { projects: Project[] }) {
           </Button>
         ))}
       </div>
+
+      {activeFilter === 'Archviz' && (
+        <div className="text-center mb-12">
+          <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-background hover:text-primary border border-transparent hover:border-primary transition-all duration-300 group">
+            <Link href="https://nidhinzzx4.myportfolio.com/" target="_blank" rel="noopener noreferrer">
+              View Full Archviz Portfolio <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </Button>
+        </div>
+      )}
       
       <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <AnimatePresence>
