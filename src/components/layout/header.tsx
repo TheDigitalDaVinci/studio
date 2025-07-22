@@ -43,8 +43,8 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/20 bg-background/80 backdrop-blur">
       <div className="container flex h-16 max-w-screen-2xl items-center justify-between">
-        <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
-          <Image src="/logo.png" alt="The Digital Da Vinci Logo" width={24} height={24} className="h-6 w-6" key={Date.now()} />
+        <Link href="/" className="flex items-center gap-3" onClick={() => setIsMobileMenuOpen(false)}>
+          <Image src="/logo.png" alt="The Digital Da Vinci Logo" width={32} height={32} className="h-8 w-8 relative top-[-1px]" key={Date.now()} />
           <span className="font-bold tracking-tight text-foreground">The Digital Da Vinci</span>
         </Link>
 
@@ -64,8 +64,8 @@ export function Header() {
           <SheetContent side="right" className="w-full max-w-xs bg-background">
             <div className="flex flex-col h-full">
               <div className="flex items-center justify-between py-4 border-b">
-                 <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
-                    <Image src="/logo.png" alt="The Digital Da Vinci Logo" width={24} height={24} className="h-6 w-6" key={Date.now() + 1} />
+                 <Link href="/" className="flex items-center gap-3" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Image src="/logo.png" alt="The Digital Da Vinci Logo" width={32} height={32} className="h-8 w-8 relative top-[-1px]" key={Date.now() + 1} />
                     <span className="font-bold tracking-tight text-foreground">The Digital Da Vinci</span>
                 </Link>
                 <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>
