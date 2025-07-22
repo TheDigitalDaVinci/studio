@@ -1,3 +1,4 @@
+
 import type {Config} from 'tailwindcss';
 
 export default {
@@ -16,6 +17,9 @@ export default {
       },
     },
     extend: {
+      spacing: {
+        '15': '3.75rem',
+      },
       fontFamily: {
         body: ['Poppins', 'sans-serif'],
         headline: ['Cormorant Garamond', 'serif'],

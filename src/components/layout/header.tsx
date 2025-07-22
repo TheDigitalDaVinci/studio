@@ -44,8 +44,8 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/20 bg-background/80 backdrop-blur">
       <div className="container flex h-16 max-w-screen-2xl items-center justify-between">
         <Link href="/" className="flex items-center gap-3" onClick={() => setIsMobileMenuOpen(false)}>
-          <Image src="/logo.png" alt="The Digital Da Vinci Logo" width={56} height={56} className="h-14 w-14" key={Date.now()} />
-          <Image src="/davinci-title.png" alt="The Digital Da Vinci" width={150} height={56} className="hidden md:block h-14 w-auto" key={Date.now() + 1} />
+          <Image src="/logo.png" alt="The Digital Da Vinci Logo" width={60} height={60} className="h-15 w-15" key={Date.now()} />
+          <Image src="/davinci-title.png" alt="The Digital Da Vinci" width={160} height={60} className="hidden md:block h-15 w-auto" key={Date.now() + 1} />
         </Link>
 
         <nav className="hidden md:flex items-center gap-6">
@@ -65,7 +65,7 @@ export function Header() {
             <div className="flex flex-col h-full">
               <div className="flex items-center justify-between py-4 border-b">
                  <Link href="/" className="flex items-center gap-3" onClick={() => setIsMobileMenuOpen(false)}>
-                    <Image src="/logo.png" alt="The Digital Da Vinci Logo" width={56} height={56} className="h-14 w-14" key={Date.now() + 2} />
+                    <Image src="/logo.png" alt="The Digital Da Vinci Logo" width={60} height={60} className="h-15 w-15" key={Date.now() + 2} />
                  </Link>
                 <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>
                     <X className="h-5 w-5" />
