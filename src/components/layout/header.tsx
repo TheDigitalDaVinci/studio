@@ -1,4 +1,3 @@
-
 'use client';
 
 import Link from 'next/link';
@@ -42,10 +41,10 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/20 bg-background/80 backdrop-blur">
-      <div className="container flex h-16 max-w-screen-2xl items-center justify-between">
+      <div className="container flex h-20 max-w-screen-2xl items-center justify-between">
         <Link href="/" className="flex items-center gap-3" onClick={() => setIsMobileMenuOpen(false)}>
-          <Image src="/logo.png" alt="The Digital Da Vinci Logo" width={60} height={60} className="h-15 w-15" key={Date.now()} />
-          <Image src="/davinci-title.png" alt="The Digital Da Vinci" width={160} height={60} className="hidden md:block h-15 w-auto" key={Date.now() + 1} />
+          <Image src="/logo.png" alt="The Digital Da Vinci Logo" width={68} height={68} className="h-17 w-17" key={Date.now()} />
+          <Image src="/davinci-title.png" alt="The Digital Da Vinci" width={180} height={68} className="hidden md:block h-17 w-auto" key={Date.now() + 1} />
         </Link>
 
         <nav className="hidden md:flex items-center gap-6">

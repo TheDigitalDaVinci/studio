@@ -19,6 +19,7 @@ export default {
     extend: {
       spacing: {
         '15': '3.75rem',
+        '17': '4.25rem',
       },
       fontFamily: {
         body: ['Poppins', 'sans-serif'],
