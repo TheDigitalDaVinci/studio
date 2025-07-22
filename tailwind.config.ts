@@ -19,6 +19,7 @@ export default {
       fontFamily: {
         body: ['Poppins', 'sans-serif'],
         headline: ['Cormorant Garamond', 'serif'],
+        agile: ['Agile', 'sans-serif'],
         code: ['monospace'],
       },
       colors: {
