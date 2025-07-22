@@ -4,7 +4,8 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
-import { Menu, X, Code } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import Image from 'next/image';
 
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
@@ -43,7 +44,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/20 bg-background/80 backdrop-blur">
       <div className="container flex h-16 max-w-screen-2xl items-center justify-between">
         <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
-          <Code className="h-6 w-6 text-primary" />
+          <Image src="/logo.png" alt="The Digital Da Vinci Logo" width={24} height={24} className="h-6 w-6" />
           <span className="font-bold tracking-tight text-foreground">The Digital Da Vinci</span>
         </Link>
 
@@ -64,7 +65,7 @@ export function Header() {
             <div className="flex flex-col h-full">
               <div className="flex items-center justify-between py-4 border-b">
                  <Link href="/" className="flex items-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
-                    <Code className="h-6 w-6 text-primary" />
+                    <Image src="/logo.png" alt="The Digital Da Vinci Logo" width={24} height={24} className="h-6 w-6" />
                     <span className="font-bold tracking-tight text-foreground">The Digital Da Vinci</span>
                 </Link>
                 <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)}>
