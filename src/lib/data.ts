@@ -87,7 +87,7 @@ export const courses: Course[] = [
       slug: 'interior-rendering-masterclass',
       description: 'Learn to create beautiful, interactive 3D interior experiences from scratch.',
       longDescription: 'Unlock the power of photorealistic interior rendering. This course is for developers and artists who want to bring their ideas to life. We will cover the fundamentals of 3D lighting, material properties, and creating stunning interior scenes. You\'ll build several projects, including a modern living room and a cozy bedroom scene.',
-      image: 'https://placehold.co/600x400.png',
+      image: '/interior-rendering-masterclass.png',
       price: 2999,
       level: 'Advanced',
       duration: '6 Weeks',
