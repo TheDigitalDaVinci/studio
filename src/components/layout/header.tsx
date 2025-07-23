@@ -44,7 +44,7 @@ export function Header() {
       <div className="container flex h-20 max-w-screen-2xl items-center justify-between">
         <Link href="/" className="flex items-center gap-3" onClick={() => setIsMobileMenuOpen(false)}>
           <Image src="/logo.png" alt="The Digital Da Vinci Logo" width={68} height={68} className="h-17 w-17" key={Date.now()} />
-          <Image src="/davinci-title.png" alt="The Digital Da Vinci" width={180} height={68} className="hidden md:block h-17 w-auto" key={Date.now() + 1} />
+          <span className="hidden md:block font-agile text-2xl tracking-widest text-foreground">The Digital Da Vinci</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-6">
