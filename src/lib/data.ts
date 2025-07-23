@@ -28,7 +28,7 @@ export const projects: Project[] = [
     slug: 'bus-undo',
     description: 'A real-time bus timing search engine and community-driven update web app.',
     longDescription: 'BUS ഉണ്ടോ? is a web app designed to solve a local problem: finding real-time bus schedules. It functions as both a search engine for bus timings and a platform for users to contribute and update schedule information, making it a community-driven tool.',
-    image: 'https://placehold.co/600x400.png',
+    image: '/bus-undo.png',
     category: 'Apps',
     tags: ['Web App', 'Community', 'Real-time', 'Utilities'],
     externalUrl: 'https://busundo.thedigitaldavinci.com/',
