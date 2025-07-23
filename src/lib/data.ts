@@ -39,7 +39,7 @@ export const projects: Project[] = [
     slug: 'hospital-reception',
     description: 'A virtual walkthrough of a modern hospital reception. Click to explore.',
     longDescription: 'This archviz project provides an interactive virtual tour of a hospital reception area. The walkthrough was created to give stakeholders a realistic feel for the space before construction, focusing on patient flow, material finishes, and ambient lighting.',
-    image: 'https://placehold.co/600x400.png',
+    image: '/hospital-reception.png',
     category: 'Archviz',
     tags: ['D5 Render', 'Archviz', 'Virtual Tour', 'Healthcare Design'],
     externalUrl: 'https://nixmo4.github.io/SNIMS-Reception/',
