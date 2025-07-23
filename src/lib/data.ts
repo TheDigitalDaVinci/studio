@@ -18,7 +18,7 @@ export const projects: Project[] = [
     slug: 'stay-tuned',
     description: 'New and exciting game projects are currently in development. Check back soon!',
     longDescription: 'I am passionately working on new game development projects that blend interactive storytelling with engaging gameplay. More information will be available soon.',
-    image: 'https://placehold.co/600x400.png',
+    image: '/stay-tuned.png',
     category: 'Games',
     tags: ['Unity', 'Game Dev', 'Coming Soon'],
   },
