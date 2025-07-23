@@ -23,7 +23,7 @@ export default function AboutPage() {
           </div>
           <div className="relative min-h-[300px] md:min-h-0">
             <Image
-              src="https://placehold.co/800x1000.png"
+              src="/the-digital-davinci.png"
               alt="The Digital Da Vinci"
               layout="fill"
               objectFit="cover"
