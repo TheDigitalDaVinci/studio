@@ -75,7 +75,7 @@ export const courses: Course[] = [
       slug: 'exterior-rendering-masterclass',
       description: 'Master the art of creating stunning, real-time exterior architectural visualizations.',
       longDescription: 'Go from zero to hero in the world of real-time exterior archviz. This course covers everything from importing models and setting up materials to advanced lighting with Lumen and creating cinematic sequences. You\'ll learn the complete workflow for producing photorealistic visuals that will wow your clients.',
-      image: 'https://placehold.co/600x400.png',
+      image: '/exterior-rendering-masterclass.png',
       price: 1999,
       level: 'Advanced',
       duration: '6 Weeks',
