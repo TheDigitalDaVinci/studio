@@ -61,7 +61,7 @@ export const projects: Project[] = [
     slug: 'bedroom-interior-interactive-render',
     description: 'An interactive 360-degree render of a modern bedroom interior.',
     longDescription: "This interactive render allows for a 360-degree view of a bedroom, showcasing different lighting scenarios and material details. It's a demonstration of real-time rendering capabilities for interior spaces.",
-    image: 'https://placehold.co/600x400.png',
+    image: '/bedroom-interior-interactive-render.png',
     category: 'Archviz',
     tags: ['360 Render', 'Archviz', 'Interior Design', 'Virtual Tour'],
     externalUrl: 'https://thedigitaldavinci.github.io/Lightingtest-360/',
