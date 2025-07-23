@@ -50,7 +50,7 @@ export const projects: Project[] = [
     slug: 'residence-interior-design',
     description: 'An immersive virtual walkthrough of a modern residence interior.',
     longDescription: 'This project showcases a detailed and interactive interior design visualization. Users can navigate through the space in real-time to appreciate the layout, materials, and lighting design of this contemporary home.',
-    image: 'https://placehold.co/600x400.png',
+    image: '/residence-interior-design.png',
     category: 'Archviz',
     tags: ['D5 Render', 'Archviz', 'Interior Design', 'Virtual Tour'],
     externalUrl: 'https://nixmo4.github.io/Dr.Nidhin-s-Interior-Design/',
