@@ -1,3 +1,4 @@
+
 import type { Project, Course } from '@/types';
 
 export const projects: Project[] = [
@@ -74,12 +75,18 @@ export const courses: Course[] = [
       title: 'Exterior Rendering Masterclass',
       slug: 'exterior-rendering-masterclass',
       description: 'Master the art of creating stunning, real-time exterior architectural visualizations.',
-      longDescription: 'Go from zero to hero in the world of real-time exterior archviz. This course covers everything from importing models and setting up materials to advanced lighting with Lumen and creating cinematic sequences. You\'ll learn the complete workflow for producing photorealistic visuals that will wow your clients.',
+      longDescription: 'Want to create stunning, realistic exterior renders but don’t know where to start? This crash course will teach you how to bring architectural designs to life with professional-quality rendering. It is ideal for beginners who want to learn exterior rendering fast, designers looking to improve their 3D visualization skills, and anyone interested in creating realistic exterior scenes. This is a hands-on, step-by-step course designed to get you from basic to pro-level rendering in the shortest time possible. No fluff—just practical skills you can apply immediately. The classes are in Malayalam. Ready to transform your exterior renders?',
       image: '/exterior-rendering-masterclass.png',
       price: 1999,
-      level: 'Advanced',
+      level: 'Beginner',
       duration: '6 Weeks',
-      topics: ['Advanced Lumen Lighting', 'Environment & Foliage', 'Material Creation', 'Cinematic Renders', 'Performance Optimization']
+      topics: [
+        'How to set up a 3D model for the best rendering results using D5 Render',
+        'The right lighting and environment settings for a natural look',
+        'Choosing realistic materials and textures',
+        'Rendering techniques to achieve high-quality results quickly',
+        'Post-processing tips to enhance your final render'
+      ]
     },
     {
       id: 2,
