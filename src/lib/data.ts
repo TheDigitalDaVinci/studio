@@ -79,7 +79,7 @@ export const courses: Course[] = [
       image: '/exterior-rendering-masterclass.png',
       price: 1999,
       level: 'Beginner',
-      duration: '6 Weeks',
+      duration: '1+ hours',
       topics: [
         'How to set up a 3D model for the best rendering results using D5 Render',
         'The right lighting and environment settings for a natural look',
