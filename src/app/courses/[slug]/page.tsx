@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { courses } from '@/lib/data';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Check, BarChart, Clock, IndianRupee } from 'lucide-react';
+import { Check, BarChart, Clock, IndianRupee, Video } from 'lucide-react';
 
 export async function generateStaticParams() {
   return courses.map((course) => ({
@@ -53,6 +53,10 @@ export default function CourseDetailPage({ params }: { params: { slug: string } 
                 <div className="flex items-center gap-3 text-muted-foreground">
                   <Clock className="h-5 w-5 text-primary" />
                   <span>Duration: {course.duration}</span>
+                </div>
+                <div className="flex items-center gap-3 text-muted-foreground">
+                  <Video className="h-5 w-5 text-primary" />
+                  <span>Recorded Classes</span>
                 </div>
               </div>
 
