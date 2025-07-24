@@ -10,7 +10,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { Send } from 'lucide-react';
-import { sendEmail } from '@/ai/flows/send-email-flow';
+import { sendEmail, type SendEmailInput } from '@/ai/flows/send-email-flow';
 
 const formSchema = z.object({
   name: z.string().min(2, {
@@ -38,7 +38,7 @@ export function ContactForm() {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      await sendEmail(values);
+      await sendEmail(values as SendEmailInput);
       toast({
         title: 'Message Sent!',
         description: "Thanks for reaching out. I'll get back to you soon.",

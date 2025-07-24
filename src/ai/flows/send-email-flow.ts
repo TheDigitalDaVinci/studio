@@ -3,14 +3,14 @@
  * @fileOverview A flow for sending an email from the contact form.
  *
  * - sendEmail - A function that handles the email sending process.
- * - SendEmailSchema - The input type for the sendEmail function.
+ * - SendEmailInput - The input type for the sendEmail function.
  */
 
 import { ai } from '@/ai/genkit';
 import { z } from 'zod';
 import * as nodemailer from 'nodemailer';
 
-export const SendEmailSchema = z.object({
+const SendEmailSchema = z.object({
   name: z.string(),
   email: z.string().email(),
   message: z.string(),
