@@ -94,11 +94,18 @@ export const courses: Course[] = [
       title: 'Interior Rendering Masterclass',
       slug: 'interior-rendering-masterclass',
       description: 'Learn to create beautiful, interactive 3D interior experiences from scratch.',
-      longDescription: 'Unlock the power of photorealistic interior rendering. This course is for developers and artists who want to bring their ideas to life. We will cover the fundamentals of 3D lighting, material properties, and creating stunning interior scenes. You\'ll build several projects, including a modern living room and a cozy bedroom scene.',
+      longDescription: "Unlock the art of transforming ordinary spaces into extraordinary visual stories with our Interior Rendering Masterclass. This course dives deep into the real-world workflow of taking an existing interior model and turning it into a set of stunning, client-satisfying renders. You’ll learn how to enhance base models by refining textures, revamping materials, and bringing spaces to life using D5 Render’s powerful retexturing and lighting tools. We’ll cover everything from crafting bokeh and Instagrammable shots to creating cinematic walk-throughs that tell a visual narrative. Whether you're a beginner or a seasoned visualizer, this masterclass arms you with everything needed to stand out in today’s competitive rendering market. The classes are in Malayalam.",
       image: '/interior-rendering-masterclass.png',
       price: 2999,
-      level: 'Advanced',
-      duration: '6 Weeks',
-      topics: ['3D Scene Setup', 'Advanced Material Properties', 'Post-processing Effects', 'Lighting Techniques', 'Camera & Composition']
+      level: 'Beginner',
+      duration: '4+ hours',
+      topics: [
+        'Professional image rendering techniques',
+        'AI-powered post-processing',
+        'Tips for creating high-impact reels',
+        'Modeling methods that boost visual quality',
+        'Bonus: D5 Project File & Texture Pack',
+        'D5 Render Pro not mandatory'
+      ]
     },
   ];
