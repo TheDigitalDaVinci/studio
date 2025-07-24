@@ -75,11 +75,12 @@ export const courses: Course[] = [
       title: 'Exterior Rendering Masterclass',
       slug: 'exterior-rendering-masterclass',
       description: 'Master the art of creating stunning, real-time exterior architectural visualizations.',
-      longDescription: 'Want to create stunning, realistic exterior renders but don’t know where to start? This crash course will teach you how to bring architectural designs to life with professional-quality rendering. It is ideal for beginners who want to learn exterior rendering fast, designers looking to improve their 3D visualization skills, and anyone interested in creating realistic exterior scenes. This is a hands-on, step-by-step course designed to get you from basic to pro-level rendering in the shortest time possible. No fluff—just practical skills you can apply immediately. The classes are in Malayalam. Ready to transform your exterior renders?',
+      longDescription: 'Want to create stunning, realistic exterior renders but don’t know where to start? This crash course will teach you how to bring architectural designs to life with professional-quality rendering. It is ideal for beginners who want to learn exterior rendering fast, designers looking to improve their 3D visualization skills, and anyone interested in creating realistic exterior scenes. This is a hands-on, step-by-step course designed to get you from basic to pro-level rendering in the shortest time possible. No fluff—just practical skills you can apply immediately. Ready to transform your exterior renders?',
       image: '/exterior-rendering-masterclass.png',
       price: 1999,
       level: 'Beginner',
       duration: '1+ hours',
+      language: 'Malayalam',
       topics: [
         'How to set up a 3D model for the best rendering results using D5 Render',
         'The right lighting and environment settings for a natural look',
@@ -94,16 +95,18 @@ export const courses: Course[] = [
       title: 'Interior Rendering Masterclass',
       slug: 'interior-rendering-masterclass',
       description: 'Learn to create beautiful, interactive 3D interior experiences from scratch.',
-      longDescription: "Unlock the art of transforming ordinary spaces into extraordinary visual stories with our Interior Rendering Masterclass. This course dives deep into the real-world workflow of taking an existing interior model and turning it into a set of stunning, client-satisfying renders. You’ll learn how to enhance base models by refining textures, revamping materials, and bringing spaces to life using D5 Render’s powerful retexturing and lighting tools. We’ll cover everything from crafting bokeh and Instagrammable shots to creating cinematic walk-throughs that tell a visual narrative. Whether you're a beginner or a seasoned visualizer, this masterclass arms you with everything needed to stand out in today’s competitive rendering market. The classes are in Malayalam.",
+      longDescription: "Unlock the art of transforming ordinary spaces into extraordinary visual stories with our Interior Rendering Masterclass. This course dives deep into the real-world workflow of taking an existing interior model and turning it into a set of stunning, client-satisfying renders. You’ll learn how to enhance base models by refining textures, revamping materials, and bringing spaces to life using D5 Render’s powerful retexturing and lighting tools. We’ll cover everything from crafting bokeh and Instagrammable shots to creating cinematic walk-throughs that tell a visual narrative. Whether you're a beginner or a seasoned visualizer, this masterclass arms you with everything needed to stand out in today’s competitive rendering market.",
       image: '/interior-rendering-masterclass.png',
       price: 2999,
       level: 'Beginner',
       duration: '4+ hours',
+      language: 'Malayalam',
       topics: [
         'Professional image rendering techniques',
         'AI-powered post-processing',
         'Tips for creating high-impact reels',
         'Modeling methods that boost visual quality',
-      ]
+      ],
+      enrollmentUrl: '#'
     },
   ];

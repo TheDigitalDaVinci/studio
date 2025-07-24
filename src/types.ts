@@ -21,6 +21,7 @@ export interface Course {
   price: number;
   level: 'Beginner' | 'Intermediate' | 'Advanced';
   duration: string;
+  language?: string;
   topics: string[];
   enrollmentUrl?: string;
 }
