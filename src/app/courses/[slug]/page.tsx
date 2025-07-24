@@ -24,13 +24,24 @@ export default function CourseDetailPage({ params }: { params: { slug: string } 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
         <div className="lg:col-span-2">
           <div className="relative aspect-video w-full overflow-hidden rounded-lg mb-8 shadow-lg border border-border">
-            <Image
-              src={course.image}
-              alt={course.title}
-              fill
-              className="object-cover"
-              data-ai-hint="online course abstract"
-            />
+            {course.slug === 'interior-rendering-masterclass' ? (
+              <iframe
+                className="w-full h-full"
+                src="https://www.youtube.com/embed/0JbrFG89W-w"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              ></iframe>
+            ) : (
+              <Image
+                src={course.image}
+                alt={course.title}
+                fill
+                className="object-cover"
+                data-ai-hint="online course abstract"
+              />
+            )}
           </div>
           <div className="prose prose-lg prose-invert max-w-none text-foreground/90 leading-relaxed space-y-6">
             <h1 className="text-4xl md:text-5xl font-headline font-bold tracking-tighter mb-4 text-foreground">{course.title}</h1>
