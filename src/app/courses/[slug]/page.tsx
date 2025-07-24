@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { courses } from '@/lib/data';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Check, BarChart, Clock, IndianRupee, Video, Download, CheckCircle } from 'lucide-react';
+import { Check, BarChart, Clock, IndianRupee, Video, Download, CheckCircle, Gift } from 'lucide-react';
 
 export async function generateStaticParams() {
   return courses.map((course) => ({
@@ -62,10 +62,19 @@ export default function CourseDetailPage({ params }: { params: { slug: string } 
                   <CheckCircle className="h-5 w-5 text-primary" />
                   <span>D5 Render Pro not mandatory</span>
                 </div>
-                <div className="flex items-center gap-3 text-muted-foreground">
-                  <Download className="h-5 w-5 text-primary" />
-                  <span>D5 Project File included</span>
-                </div>
+
+                {course.slug === 'exterior-rendering-masterclass' && (
+                   <div className="flex items-center gap-3 text-muted-foreground">
+                    <Download className="h-5 w-5 text-primary" />
+                    <span>D5 Project File included</span>
+                  </div>
+                )}
+                {course.slug === 'interior-rendering-masterclass' && (
+                  <div className="flex items-center gap-3 text-muted-foreground">
+                    <Gift className="h-5 w-5 text-primary" />
+                    <span>Bonus: D5 Project File & Texture Pack</span>
+                  </div>
+                )}
               </div>
 
               <Button asChild size="lg" className="w-full mt-6">

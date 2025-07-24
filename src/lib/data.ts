@@ -104,8 +104,6 @@ export const courses: Course[] = [
         'AI-powered post-processing',
         'Tips for creating high-impact reels',
         'Modeling methods that boost visual quality',
-        'Bonus: D5 Project File & Texture Pack',
-        'D5 Render Pro not mandatory'
       ]
     },
   ];
