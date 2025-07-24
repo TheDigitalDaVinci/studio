@@ -107,6 +107,6 @@ export const courses: Course[] = [
         'Tips for creating high-impact reels',
         'Modeling methods that boost visual quality',
       ],
-      enrollmentUrl: '#'
+      enrollmentUrl: 'https://rzp.io/rzp/int-mc-d5'
     },
   ];
