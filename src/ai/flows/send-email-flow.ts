@@ -48,8 +48,9 @@ const sendEmailFlow = ai.defineFlow(
       });
     } else {
       // Fallback to a test account from Ethereal if no credentials are provided
+      console.log("No email credentials found in .env file. Using Ethereal for testing.");
+      console.log("Emails will NOT be sent to a real inbox. Check the server console for a preview link.");
       const testAccount = await nodemailer.createTestAccount();
-      console.log('Using Ethereal test account. Credentials:', testAccount);
       transporter = nodemailer.createTransport({
         host: 'smtp.ethereal.email',
         port: 587,
