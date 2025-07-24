@@ -86,7 +86,8 @@ export const courses: Course[] = [
         'Choosing realistic materials and textures',
         'Rendering techniques to achieve high-quality results quickly',
         'Post-processing tips to enhance your final render'
-      ]
+      ],
+      enrollmentUrl: 'https://rzp.io/rzp/ext-master-class-d5'
     },
     {
       id: 2,

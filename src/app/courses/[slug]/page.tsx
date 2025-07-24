@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
+import Link from 'next/link';
 import { courses } from '@/lib/data';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -55,8 +56,10 @@ export default function CourseDetailPage({ params }: { params: { slug: string } 
                 </div>
               </div>
 
-              <Button size="lg" className="w-full mt-6">
-                Enroll Now
+              <Button asChild size="lg" className="w-full mt-6">
+                <Link href={course.enrollmentUrl || '#'} target="_blank" rel="noopener noreferrer">
+                  Enroll Now
+                </Link>
               </Button>
             </div>
 
