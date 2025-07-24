@@ -86,8 +86,6 @@ export const courses: Course[] = [
         'Choosing realistic materials and textures',
         'Rendering techniques to achieve high-quality results quickly',
         'Post-processing tips to enhance your final render',
-        'D5 Render Pro not mandatory',
-        'D5 Project File included for download'
       ],
       enrollmentUrl: 'https://rzp.io/rzp/ext-master-class-d5'
     },

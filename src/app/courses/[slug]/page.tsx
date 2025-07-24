@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { courses } from '@/lib/data';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Check, BarChart, Clock, IndianRupee, Video } from 'lucide-react';
+import { Check, BarChart, Clock, IndianRupee, Video, Download, CheckCircle } from 'lucide-react';
 
 export async function generateStaticParams() {
   return courses.map((course) => ({
@@ -57,6 +57,14 @@ export default function CourseDetailPage({ params }: { params: { slug: string } 
                 <div className="flex items-center gap-3 text-muted-foreground">
                   <Video className="h-5 w-5 text-primary" />
                   <span>Recorded Classes</span>
+                </div>
+                <div className="flex items-center gap-3 text-muted-foreground">
+                  <CheckCircle className="h-5 w-5 text-primary" />
+                  <span>D5 Render Pro not mandatory</span>
+                </div>
+                <div className="flex items-center gap-3 text-muted-foreground">
+                  <Download className="h-5 w-5 text-primary" />
+                  <span>D5 Project File included</span>
                 </div>
               </div>
 
