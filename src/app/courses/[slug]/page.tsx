@@ -19,15 +19,27 @@ export default function CourseDetailPage({ params }: { params: { slug: string } 
     notFound();
   }
 
+  const getVideoEmbedUrl = (slug: string) => {
+    if (slug === 'interior-rendering-masterclass') {
+      return 'https://www.youtube.com/embed/0JbrFG89W-w';
+    }
+    if (slug === 'exterior-rendering-masterclass') {
+        return 'https://www.youtube.com/embed/2YYbFD1cLPc'
+    }
+    return null;
+  };
+
+  const videoUrl = getVideoEmbedUrl(course.slug);
+
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
         <div className="lg:col-span-2">
           <div className="relative aspect-video w-full overflow-hidden rounded-lg mb-8 shadow-lg border border-border">
-            {course.slug === 'interior-rendering-masterclass' ? (
+            {videoUrl ? (
               <iframe
                 className="w-full h-full"
-                src="https://www.youtube.com/embed/0JbrFG89W-w"
+                src={videoUrl}
                 title="YouTube video player"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
